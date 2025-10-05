@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Sahagian - Mechanical Engineering Portfolio</title>
+    <meta name="description" content="Mechanical Engineering student at Boston University specializing in software implementation and robotics">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Brian Sahagian</a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Brian Sahagian</span>
+                </h1>
+                <h2 class="hero-subtitle">Mechanical Engineer | Software Integration Specialist</h2>
+                <p class="hero-description">
+                    I'm a senior Mechanical Engineering student at Boston University with a passion for bridging 
+                    traditional mechanical systems with cutting-edge software implementation and robotics. 
+                    Welcome to my portfolio showcasing innovative projects at the intersection of hardware and software.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me and my engineering journey</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Mechanical Engineering Student with a Passion for Innovation</h3>
+                    <p>
+                        I'm currently a senior pursuing my degree in Mechanical Engineering at Boston University. 
+                        My academic journey has equipped me with strong analytical skills and a deep understanding 
+                        of mechanical systems, thermodynamics, and materials science.
+                    </p>
+                    <p>
+                        What sets me apart is my passion for integrating software solutions with mechanical systems. 
+                        I thrive on solving complex problems that require both hardware design and software implementation, 
+                        particularly in robotics and automation. My goal is to create intelligent mechanical systems 
+                        that bridge the gap between traditional engineering and modern technology.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>10+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>3+</h4>
+                            <p>Years of Study</p>
+                        </div>
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p>Technologies Learned</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-placeholder">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">A collection of my engineering projects and achievements</p>
+            </div>
+            
+            <!-- Project Filter -->
+            <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="class">Class Projects</button>
+                <button class="filter-btn" data-filter="machine-shop">Machine Shop</button>
+                <button class="filter-btn" data-filter="personal">Personal Projects</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projects-grid">
+                <!-- Machine Shop Project 1 -->
+                <div class="project-card" data-category="machine-shop">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Documentation">
+                                    <i class="fas fa-file-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">CNC Chess Piece Manufacturing</h3>
+                        <p class="project-description">
+                            Precision CNC lathe operation to manufacture chess pawns from aluminum stock, focusing on achieving superior surface finish and dimensional accuracy through CAM programming.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ProtoTrak CNC</span>
+                            <span class="tech-tag">Fusion CAM</span>
+                            <span class="tech-tag">Machine Calibration</span>
+                            <span class="tech-tag">Precision Machining</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Machine Shop Project 2 -->
+                <div class="project-card" data-category="machine-shop">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Process">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Custom Thermoformed Storage Bins</h3>
+                        <p class="project-description">
+                            Designed and manufactured custom storage solutions for machine shop organization using vacuum thermoforming and 3D printing integration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vacuum Thermoforming</span>
+                            <span class="tech-tag">3D Printing</span>
+                            <span class="tech-tag">Product Design</span>
+                            <span class="tech-tag">Manufacturing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Machine Shop Project 3 -->
+                <div class="project-card" data-category="machine-shop">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View CAM Process">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">HDPE Coaster - CNC Milling</h3>
+                        <p class="project-description">
+                            Complete CAD-to-CAM workflow using HAAS CNC mills and HSMWorks, demonstrating advanced toolpath optimization and precision manufacturing.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HAAS CNC</span>
+                            <span class="tech-tag">HSMWorks</span>
+                            <span class="tech-tag">Fusion CAM</span>
+                            <span class="tech-tag">Toolpath Generation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Machine Shop Project 4 -->
+                <div class="project-card" data-category="machine-shop">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Maintenance Log">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Machine Maintenance & Repair</h3>
+                        <p class="project-description">
+                            Comprehensive maintenance program including horizontal bandsaw care and cold saw pump replacement, ensuring optimal equipment performance and safety.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Preventive Maintenance</span>
+                            <span class="tech-tag">Mechanical Repair</span>
+                            <span class="tech-tag">Troubleshooting</span>
+                            <span class="tech-tag">Equipment Care</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Project 1 -->
+                <div class="project-card" data-category="class">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/briansahagian" target="_blank" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Demo">
+                                    <i class="fas fa-video"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Rod Balancing Transport System</h3>
+                        <p class="project-description">
+                            Autonomous vehicle system using Arduino control and SolidWorks motion analysis to transport vertical aluminum rods at maximum speed while maintaining stability.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Arduino Programming</span>
+                            <span class="tech-tag">SolidWorks Motion</span>
+                            <span class="tech-tag">Motor Control</span>
+                            <span class="tech-tag">System Dynamics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Project 2 -->
+                <div class="project-card" data-category="class">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/briansahagian" target="_blank" class="project-link" title="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Gallery">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Monet Machine - Automated Painter</h3>
+                        <p class="project-description">
+                            2.5 DOF robotic system capable of automatically painting and drawing images on canvas using MATLAB G-code processing and Arduino control systems.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MATLAB</span>
+                            <span class="tech-tag">Arduino Control</span>
+                            <span class="tech-tag">G-Code Processing</span>
+                            <span class="tech-tag">Robotics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Project 3 -->
+                <div class="project-card" data-category="class">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-ring"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View CAD Model">
+                                    <i class="fas fa-cube"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Process">
+                                    <i class="fas fa-file-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Precision Gasket Manufacturing</h3>
+                        <p class="project-description">
+                            Complete reverse engineering workflow from physical measurement to CNC manufacturing, demonstrating precision measurement and CAD-CAM integration skills.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Precision Measurement</span>
+                            <span class="tech-tag">SolidWorks CAD</span>
+                            <span class="tech-tag">HSMWorks CAM</span>
+                            <span class="tech-tag">Reverse Engineering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Project 4 -->
+                <div class="project-card" data-category="class">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/briansahagian" target="_blank" class="project-link" title="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Demo">
+                                    <i class="fas fa-video"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Laser Communication System</h3>
+                        <p class="project-description">
+                            Wireless optical communication device using Arduino microcontrollers for encoding and decoding binary sequences, designed for automated machine control applications.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Arduino Programming</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Digital Communication</span>
+                            <span class="tech-tag">Systems Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Project 5 -->
+                <div class="project-card" data-category="class">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Analysis">
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Data">
+                                    <i class="fas fa-database"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Mechanical Oscillator Analysis System</h3>
+                        <p class="project-description">
+                            Advanced data acquisition system using linear potentiometers and LabVIEW to characterize frequency response of nonlinear mechanical systems with comprehensive uncertainty analysis.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">LabVIEW</span>
+                            <span class="tech-tag">MATLAB</span>
+                            <span class="tech-tag">Data Acquisition</span>
+                            <span class="tech-tag">System Dynamics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Project 1 -->
+                <div class="project-card" data-category="personal">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-motorcycle"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Before/After">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                                <a href="#" class="project-link" title="Build Log">
+                                    <i class="fas fa-file-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Honda Motorcycle Rebuilds</h3>
+                        <p class="project-description">
+                            Complete restoration of vintage Honda motorcycles including full engine rebuilds, valve replacement, and component restoration on 1980 CM200T and 1969 CB350 models.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Engine Rebuilding</span>
+                            <span class="tech-tag">Mechanical Diagnosis</span>
+                            <span class="tech-tag">Restoration</span>
+                            <span class="tech-tag">Precision Assembly</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Project 2 -->
+                <div class="project-card" data-category="personal">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Build Process">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                                <a href="#" class="project-link" title="Parts List">
+                                    <i class="fas fa-list"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Fixed Gear Bicycle Build</h3>
+                        <p class="project-description">
+                            Complete conversion of 1988 Panasonic road bike frame to fixed-gear configuration, including component sourcing, frame repair coordination, and custom assembly.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Bicycle Mechanics</span>
+                            <span class="tech-tag">Component Sourcing</span>
+                            <span class="tech-tag">Assembly</span>
+                            <span class="tech-tag">Maintenance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Project 3 -->
+                <div class="project-card" data-category="personal">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Maintenance Log">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </a>
+                                <a href="#" class="project-link" title="Repair Guide">
+                                    <i class="fas fa-tools"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Jeep Wrangler Maintenance</h3>
+                        <p class="project-description">
+                            Comprehensive automotive maintenance and repair on 2001 Jeep Wrangler including brake system service, gasket replacement, and routine maintenance procedures.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Automotive Repair</span>
+                            <span class="tech-tag">Brake Systems</span>
+                            <span class="tech-tag">Troubleshooting</span>
+                            <span class="tech-tag">Preventive Maintenance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3>CAD & Design Software</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fas fa-cube"></i>
+                            <span>SolidWorks</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-drafting-compass"></i>
+                            <span>HSMWorks</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>Fusion CAM</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-building"></i>
+                            <span>Revit</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Programming & Software</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fas fa-microchip"></i>
+                            <span>Arduino</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>C/C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-calculator"></i>
+                            <span>MATLAB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Manufacturing & Fabrication</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fas fa-industry"></i>
+                            <span>CNC Machining</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-tools"></i>
+                            <span>ProtoTrak & HAAS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-print"></i>
+                            <span>3D Printing</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-hammer"></i>
+                            <span>Manual Machining</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's connect and discuss opportunities</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>
+                        I'm always open to discussing new opportunities, collaborations, or just having 
+                        a conversation about engineering and technology. Feel free to reach out!
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>briansahagian@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/brian-sahagian</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p>github.com/briansahagian</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 Brian Sahagian. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/brian-sahagian/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/briansahagian" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:briansahagian@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
