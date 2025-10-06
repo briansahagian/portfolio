@@ -1,9 +1,25 @@
 /* Project Detail Page Styles */
 
+/* Hero Image Section - First Element */
+.project-hero-image-section {
+    padding: 80px 0 40px;
+    margin-top: 70px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.project-hero-image-section .hero-img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    display: block;
+}
+
 .project-hero {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 120px 0 80px;
-    margin-top: 70px;
+    padding: 40px 0 80px;
 }
 
 .project-hero-content {
@@ -390,6 +406,112 @@
 
 .modal-close:hover {
     opacity: 0.7;
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    background: #f8f9fa;
+    border-radius: 20px;
+}
+
+.image-gallery h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.gallery-intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-caption {
+    padding: 1.5rem;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    text-align: center;
+    background: white;
+}
+
+/* Skills Section */
+.skills-section {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    background: white;
+    border-radius: 20px;
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-tag {
+    background: #f0f3ff;
+    color: #667eea;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.skill-tag:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
 }
 
 /* Video Section Styles */

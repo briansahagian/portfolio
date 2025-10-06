@@ -4,34 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rod Balancing Transport System - Brian Sahagian Portfolio</title>
-    <meta name="description" content="Arduino-controlled autonomous vehicle for transporting vertical rods - detailed project documentation">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/project-detail.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="../../index.html">Brian Sahagian</a>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="../../index.html" class="nav-link">Back to Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../../index.html#projects" class="nav-link">All Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../../index.html#contact" class="nav-link">Contact</a>
-                </li>
+                <li><a href="../../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../../index.html#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Project Hero -->
+    <!-- Project Hero Image -->
+    <section class="project-hero-image-section">
+        <div class="container">
+            <img src="../../assets/images/class-projects/rod-balancing-car/image105.jpg" alt="Rod balancing transport system" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Project Detail Section -->
     <section class="project-hero">
         <div class="container">
             <div class="project-hero-content">
@@ -46,37 +47,59 @@
                     <span class="meta-item"><i class="fas fa-clock"></i> Multi-week</span>
                 </div>
             </div>
-            <div class="project-hero-image">
-                <img src="../../assets/images/class-projects/rod-balancer-hero.jpg" alt="Rod balancing transport system" class="hero-img">
-            </div>
         </div>
     </section>
 
     <!-- Project Overview -->
     <section class="project-section">
         <div class="container">
-            <div class="section-grid">
-                <div class="content-main">
-                    <h2>Project Challenge</h2>
+            <div class="project-content">
+                <div class="project-overview">
+                    <h2>Project Overview</h2>
                     <p>
                         The objective was to design and build a system capable of transporting a 1-foot vertical aluminum 
                         bar over a distance of 5 to 10 feet as quickly as possible without the rod toppling over. This 
-                        challenge required balancing speed optimization with stability control.
+                        challenge required balancing speed optimization with stability control through advanced engineering analysis.
                     </p>
                     <p>
                         The project demanded a deep understanding of system dynamics, precise motor control, and real-time 
-                        feedback systems to achieve optimal performance while maintaining the vertical stability of the rod.
+                        feedback systems to achieve optimal performance while maintaining the vertical stability of the rod 
+                        during transport operations.
                     </p>
                 </div>
-                <div class="content-sidebar">
-                    <div class="project-info-card">
+
+                <div class="project-details">
+                    <div class="detail-section">
                         <h3>Technical Specifications</h3>
                         <ul>
-                            <li><strong>Rod Length:</strong> 1 foot vertical aluminum bar</li>
-                            <li><strong>Distance:</strong> 5-10 feet transport range</li>
-                            <li><strong>Control:</strong> Arduino microcontroller</li>
-                            <li><strong>Feedback:</strong> Motor encoder systems</li>
-                            <li><strong>Analysis:</strong> SolidWorks Motion Analysis</li>
+                            <li><strong>Rod Specification:</strong> 1-foot vertical aluminum bar</li>
+                            <li><strong>Transport Distance:</strong> 5-10 feet adjustable range</li>
+                            <li><strong>Control System:</strong> Arduino microcontroller with custom programming</li>
+                            <li><strong>Feedback:</strong> Motor encoder systems for real-time monitoring</li>
+                            <li><strong>Analysis Tool:</strong> SolidWorks Motion Analysis for simulation</li>
+                            <li><strong>Optimization:</strong> Maximum speed while maintaining stability</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Engineering Approach</h3>
+                        <ol>
+                            <li><strong>Motion Analysis:</strong> SolidWorks simulation to determine maximum acceleration before rod tipping</li>
+                            <li><strong>Analytical Validation:</strong> Mathematical calculations to confirm simulation results and stability thresholds</li>
+                            <li><strong>Control System Design:</strong> Arduino programming for optimal velocity curve generation</li>
+                            <li><strong>Real-time Feedback:</strong> Motor encoder integration for continuous speed adjustment and error correction</li>
+                            <li><strong>System Integration:</strong> Complete mechanical and electrical system assembly and testing</li>
+                        </ol>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Key Achievements</h3>
+                        <ul>
+                            <li>Successfully transported rod without tipping across full distance range</li>
+                            <li>Optimized transport speed through comprehensive dynamic analysis</li>
+                            <li>Implemented sophisticated control algorithms for smooth acceleration profiles</li>
+                            <li>Validated theoretical calculations with practical testing results</li>
+                            <li>Demonstrated integration of simulation, programming, and mechanical design</li>
                         </ul>
                     </div>
                 </div>
@@ -84,7 +107,97 @@
         </div>
     </section>
 
-    <!-- Technical Approach -->
+    <!-- Photo Gallery -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <div class="image-gallery">
+                <h2>Complete Project Gallery</h2>
+                <p class="gallery-intro">Comprehensive documentation of the rod balancing system development and testing</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../../assets/images/class-projects/rod-balancing-car/image45.png" alt="System design and analysis">
+                        <div class="gallery-caption">Dynamic analysis and system design calculations</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/class-projects/rod-balancing-car/image48.png" alt="Arduino control system">
+                        <div class="gallery-caption">Arduino control system programming and setup</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/class-projects/rod-balancing-car/image99.jpg" alt="Mechanical system assembly">
+                        <div class="gallery-caption">Complete mechanical system assembly and integration</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/class-projects/rod-balancing-car/image105.jpg" alt="Final testing and demonstration">
+                        <div class="gallery-caption">Final system testing and successful rod transport demonstration</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="project-section">
+        <div class="container">
+            <div class="skills-section">
+                <h2>Technical Skills Demonstrated</h2>
+                <div class="skills-grid">
+                    <div class="skill-tag">SolidWorks Motion Analysis</div>
+                    <div class="skill-tag">Arduino Programming</div>
+                    <div class="skill-tag">Dynamic Systems Analysis</div>
+                    <div class="skill-tag">Control Systems</div>
+                    <div class="skill-tag">Motor Encoder Integration</div>
+                    <div class="skill-tag">Mechanical Design</div>
+                    <div class="skill-tag">System Integration</div>
+                    <div class="skill-tag">Stability Analysis</div>
+                    <div class="skill-tag">Feedback Systems</div>
+                    <div class="skill-tag">Mathematical Modeling</div>
+                    <div class="skill-tag">Testing & Validation</div>
+                    <div class="skill-tag">Problem Solving</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="project-navigation">
+        <div class="container">
+            <div class="nav-buttons">
+                <a href="monet-machine.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> Previous Project
+                </a>
+                <a href="../../index.html#projects" class="btn btn-primary">
+                    View All Projects
+                </a>
+                <a href="laser-communicator.html" class="btn btn-outline">
+                    Next Project <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2024 Brian Sahagian. All rights reserved.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/briansahagian" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/briansahagian" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:bsahag@bu.edu" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/project-detail.js"></script>
+</body>
+</html>
     <section class="project-section bg-light">
         <div class="container">
             <h2>Engineering Analysis & Design</h2>

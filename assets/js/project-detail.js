@@ -93,16 +93,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Add loading animation for images
 function addImageLoadingEffects() {
-    const images = document.querySelectorAll('img');
+    const images = document.querySelectorAll('img:not(.gallery-item img)');
     
     images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-        });
-        
-        // Add loading class initially
-        img.style.opacity = '0';
+        // Only apply loading effect if image hasn't loaded yet
+        if (!img.complete) {
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.3s ease';
+            
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+        } else {
+            // Image already loaded, make sure it's visible
+            img.style.opacity = '1';
+            img.style.transition = 'opacity 0.3s ease';
+        }
+    });
+    
+    // Handle gallery images separately with better loading
+    const galleryImages = document.querySelectorAll('.gallery-item img');
+    galleryImages.forEach(img => {
         img.style.transition = 'opacity 0.3s ease';
+        if (!img.complete) {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+        } else {
+            img.style.opacity = '1';
+        }
     });
 }
 

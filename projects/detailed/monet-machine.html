@@ -4,34 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monet Machine - Brian Sahagian Portfolio</title>
-    <meta name="description" content="2.5 DOF automated painting and plotting machine - detailed project documentation">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/project-detail.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="../../index.html">Brian Sahagian</a>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="../../index.html" class="nav-link">Back to Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../../index.html#projects" class="nav-link">All Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../../index.html#contact" class="nav-link">Contact</a>
-                </li>
+                <li><a href="../../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../../index.html#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Project Hero -->
+    <!-- Project Hero Image -->
+    <section class="project-hero-image-section">
+        <div class="container">
+            <img src="../../assets/images/class-projects/painter-and-plotter/image11.png" alt="Monet Machine automated painting system" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Project Detail Section -->
     <section class="project-hero">
         <div class="container">
             <div class="project-hero-content">
@@ -39,15 +40,12 @@
                     <a href="../../index.html">Portfolio</a> / <a href="../../index.html#projects">Projects</a> / <span>Monet Machine</span>
                 </div>
                 <h1 class="project-title">Monet Machine - 2.5 DOF Automated Painter</h1>
-                <p class="project-subtitle">Five-week team project creating an autonomous painting and plotting system</p>
+                <p class="project-subtitle">Five-week team project creating an autonomous painting and plotting system with precise brush control</p>
                 <div class="project-meta">
                     <span class="meta-item"><i class="fas fa-calendar"></i> Class Project</span>
                     <span class="meta-item"><i class="fas fa-users"></i> 5-person team</span>
                     <span class="meta-item"><i class="fas fa-clock"></i> 5 weeks</span>
                 </div>
-            </div>
-            <div class="project-hero-image">
-                <img src="../../assets/images/class-projects/monet-machine-hero.jpg" alt="Monet Machine in operation" class="hero-img">
             </div>
         </div>
     </section>
@@ -55,8 +53,8 @@
     <!-- Project Overview -->
     <section class="project-section">
         <div class="container">
-            <div class="section-grid">
-                <div class="content-main">
+            <div class="project-content">
+                <div class="project-overview">
                     <h2>Project Overview</h2>
                     <p>
                         The Monet Machine was an ambitious five-week group project to create a machine that could automatically 
@@ -65,24 +63,149 @@
                     </p>
                     <p>
                         Our team successfully developed a 2.5 degree-of-freedom robotic system capable of interpreting digital 
-                        images and recreating them through precise brush movements and paint application.
+                        images and recreating them through precise brush movements and paint application. The system demonstrated 
+                        the integration of image processing, path planning, and mechatronic control.
                     </p>
                 </div>
-                <div class="content-sidebar">
-                    <div class="project-info-card">
+
+                <div class="project-details">
+                    <div class="detail-section">
                         <h3>Technical Specifications</h3>
                         <ul>
-                            <li><strong>Canvas Size:</strong> Small format</li>
-                            <li><strong>DOF:</strong> 2.5 degrees of freedom</li>
-                            <li><strong>Control:</strong> Arduino microcontrollers</li>
-                            <li><strong>Software:</strong> MATLAB, Inkscape, JSCut</li>
-                            <li><strong>Team Size:</strong> 5 engineers</li>
+                            <li><strong>Canvas Size:</strong> Small format painting surface</li>
+                            <li><strong>Degrees of Freedom:</strong> 2.5 DOF for X-Y movement and brush control</li>
+                            <li><strong>Control System:</strong> Arduino microcontrollers with custom programming</li>
+                            <li><strong>Software Tools:</strong> MATLAB, Inkscape, JSCut for image processing</li>
+                            <li><strong>Team Configuration:</strong> 5-person engineering team</li>
+                            <li><strong>Project Duration:</strong> 5-week intensive development cycle</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Technical Approach</h3>
+                        <ol>
+                            <li><strong>Image Processing:</strong> Inkscape and JSCut used to simplify input images and create optimized toolpaths</li>
+                            <li><strong>Path Generation:</strong> Custom MATLAB scripts processed simplified images and generated G-Code instructions</li>
+                            <li><strong>Mechanical System:</strong> Designed and built 2.5 DOF robotic platform with precise brush control</li>
+                            <li><strong>Control Programming:</strong> Arduino programming for coordinated motor control and painting operations</li>
+                            <li><strong>System Integration:</strong> Combined software, hardware, and artistic elements into cohesive painting system</li>
+                        </ol>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Key Achievements</h3>
+                        <ul>
+                            <li>Successfully created automated painting system capable of reproducing digital artwork</li>
+                            <li>Developed custom image processing pipeline for optimal painting paths</li>
+                            <li>Designed and fabricated precise mechanical positioning system</li>
+                            <li>Implemented coordinated control of multiple motors and brush mechanisms</li>
+                            <li>Demonstrated successful team collaboration on complex multidisciplinary project</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Photo Gallery -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <div class="image-gallery">
+                <h2>Complete Project Gallery</h2>
+                <p class="gallery-intro">Comprehensive documentation of the Monet Machine development and painting demonstrations</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../../assets/images/class-projects/painter-and-plotter/image11.png" alt="Monet Machine system overview">
+                        <div class="gallery-caption">Complete Monet Machine system with mechanical positioning and brush control</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/class-projects/painter-and-plotter/image34.png" alt="Mechanical system design">
+                        <div class="gallery-caption">Detailed view of mechanical system and motor positioning</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/class-projects/painter-and-plotter/image49.png" alt="Control system integration">
+                        <div class="gallery-caption">Arduino control system and electronic integration</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/class-projects/painter-and-plotter/image67.png" alt="Painting demonstration">
+                        <div class="gallery-caption">Active painting demonstration showing brush control precision</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/class-projects/painter-and-plotter/monet 1.jpg" alt="Finished painting sample 1">
+                        <div class="gallery-caption">First successful automated painting demonstrating system capabilities</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../assets/images/class-projects/painter-and-plotter/monet 2.jpg" alt="Finished painting sample 2">
+                        <div class="gallery-caption">Second painting example showing improved precision and detail</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="project-section">
+        <div class="container">
+            <div class="skills-section">
+                <h2>Technical Skills Demonstrated</h2>
+                <div class="skills-grid">
+                    <div class="skill-tag">MATLAB Programming</div>
+                    <div class="skill-tag">Arduino Control Systems</div>
+                    <div class="skill-tag">Image Processing</div>
+                    <div class="skill-tag">G-Code Generation</div>
+                    <div class="skill-tag">Mechanical Design</div>
+                    <div class="skill-tag">Motor Control</div>
+                    <div class="skill-tag">System Integration</div>
+                    <div class="skill-tag">Team Collaboration</div>
+                    <div class="skill-tag">Project Management</div>
+                    <div class="skill-tag">Problem Solving</div>
+                    <div class="skill-tag">Inkscape & JSCut</div>
+                    <div class="skill-tag">Robotics</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="project-navigation">
+        <div class="container">
+            <div class="nav-buttons">
+                <a href="chess-piece-cnc.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> Previous Project
+                </a>
+                <a href="../../index.html#projects" class="btn btn-primary">
+                    View All Projects
+                </a>
+                <a href="motor-control-cart.html" class="btn btn-outline">
+                    Next Project <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2024 Brian Sahagian. All rights reserved.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/briansahagian" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/briansahagian" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:bsahag@bu.edu" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/project-detail.js"></script>
+</body>
+</html>
 
     <!-- Technical Approach -->
     <section class="project-section bg-light">
