@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Communication System - Brian Sahagian Portfolio</title>
+    <meta name="description" content="Arduino-based optical communication device for automated machine control - detailed project documentation">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/project-detail.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../index.html">Brian Sahagian</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">Back to Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../index.html#projects" class="nav-link">All Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-breadcrumb">
+                    <a href="../../index.html">Portfolio</a> / <a href="../../index.html#projects">Projects</a> / <span>Laser Communication System</span>
+                </div>
+                <h1 class="project-title">Laser Communication System</h1>
+                <p class="project-subtitle">Cost-effective, user-friendly optical communication device for automated machine control</p>
+                <div class="project-meta">
+                    <span class="meta-item"><i class="fas fa-calendar"></i> Semester Project</span>
+                    <span class="meta-item"><i class="fas fa-users"></i> Team Project</span>
+                    <span class="meta-item"><i class="fas fa-lightbulb"></i> Innovation Focus</span>
+                </div>
+            </div>
+            <div class="project-hero-image">
+                <img src="../../assets/images/class-projects/laser-comm-hero.jpg" alt="Laser communication system setup" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-section">
+        <div class="container">
+            <div class="section-grid">
+                <div class="content-main">
+                    <h2>Project Vision</h2>
+                    <p>
+                        This semester-long project aimed to design a cost-effective, user-friendly, light-based communication 
+                        device specifically engineered to control automated machines. The system needed to be reliable, 
+                        easy to use, and capable of transmitting control commands over optical channels.
+                    </p>
+                    <p>
+                        The project combined digital communication principles, embedded systems programming, and mechanical 
+                        design to create a practical solution for wireless machine control in industrial or educational settings.
+                    </p>
+                </div>
+                <div class="content-sidebar">
+                    <div class="project-info-card">
+                        <h3>System Specifications</h3>
+                        <ul>
+                            <li><strong>Communication:</strong> Optical laser transmission</li>
+                            <li><strong>Protocol:</strong> 5-digit binary encoding</li>
+                            <li><strong>Controller:</strong> Arduino Uno microcontrollers</li>
+                            <li><strong>Interface:</strong> Keypad input, LCD display</li>
+                            <li><strong>Range:</strong> Line-of-sight operation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Architecture -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2>System Architecture</h2>
+            <div class="approach-grid">
+                <div class="approach-step">
+                    <div class="step-number">1</div>
+                    <h3>Sender Unit</h3>
+                    <p>Arduino Uno with keypad interface encodes 5-digit numerical combinations into binary sequences and transmits via laser.</p>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">2</div>
+                    <h3>Optical Transmission</h3>
+                    <p>Laser diode transmits encoded binary data as light pulses, providing reliable line-of-sight communication.</p>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">3</div>
+                    <h3>Receiver Unit</h3>
+                    <p>Photodetector and Arduino Uno decode incoming light signals and reconstruct the original numerical message.</p>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">4</div>
+                    <h3>Display Interface</h3>
+                    <p>LCD screen provides clear visual feedback, displaying received commands for machine control verification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation -->
+    <section class="project-section">
+        <div class="container">
+            <h2>My Technical Contributions</h2>
+            <div class="contributions-grid">
+                <div class="contribution-item">
+                    <i class="fas fa-code"></i>
+                    <h3>C++ Programming</h3>
+                    <p>Developed robust Arduino C++ code for both sender and receiver units, implementing reliable binary encoding/decoding algorithms.</p>
+                </div>
+                <div class="contribution-item">
+                    <i class="fas fa-cube"></i>
+                    <h3>SolidWorks Design</h3>
+                    <p>Created detailed CAD models for enclosures and mounting systems, ensuring proper alignment and protection of optical components.</p>
+                </div>
+                <div class="contribution-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Team Collaboration</h3>
+                    <p>Coordinated team workflow and optimized development processes, ensuring efficient integration of hardware and software components.</p>
+                </div>
+                <div class="contribution-item">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <h3>Communication Protocol</h3>
+                    <p>Designed and implemented the binary communication protocol, ensuring reliable data transmission and error handling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Deep Dive -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2>Technical Implementation Details</h2>
+            <div class="analysis-content">
+                <div class="analysis-item">
+                    <h3>Binary Encoding System</h3>
+                    <p>
+                        The system converts 5-digit numerical inputs into binary sequences using efficient encoding algorithms. 
+                        Each digit is represented as a binary pattern, with timing protocols ensuring reliable transmission 
+                        and synchronization between sender and receiver units.
+                    </p>
+                </div>
+                <div class="analysis-item">
+                    <h3>Optical Hardware Integration</h3>
+                    <p>
+                        Careful selection and integration of laser diodes and photodetectors optimized for the communication 
+                        wavelength. The system includes proper current limiting, optical focusing, and environmental protection 
+                        to ensure consistent performance across varying conditions.
+                    </p>
+                </div>
+                <div class="analysis-item">
+                    <h3>User Interface Design</h3>
+                    <p>
+                        Intuitive keypad interface allows easy input of control commands, while the LCD display provides 
+                        clear feedback and status information. The interface was designed for reliability and ease of use 
+                        in industrial automation applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="project-section">
+        <div class="container">
+            <h2>Development & Testing Gallery</h2>
+            <p class="gallery-description">System components, testing setup, and demonstration of optical communication</p>
+            <div class="photo-gallery" id="laser-comm-gallery">
+                <!-- Photos will be added when available -->
+                <div class="gallery-placeholder">
+                    <i class="fas fa-images"></i>
+                    <p>Project photos will be displayed here</p>
+                    <small>Upload your Laser Communicator photos to: assets/images/class-projects/</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills & Tools -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2>Technologies & Skills Applied</h2>
+            <div class="skills-developed">
+                <div class="skill-category">
+                    <h3>Programming & Control</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Arduino Programming</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Digital Communication</span>
+                        <span class="skill-tag">Protocol Design</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Hardware & Design</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SolidWorks CAD</span>
+                        <span class="skill-tag">Circuit Design</span>
+                        <span class="skill-tag">Optical Systems</span>
+                        <span class="skill-tag">Component Integration</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Project Management</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">System Architecture</span>
+                        <span class="skill-tag">Testing & Validation</span>
+                        <span class="skill-tag">Documentation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications & Impact -->
+    <section class="project-section">
+        <div class="container">
+            <h2>Practical Applications</h2>
+            <div class="outcomes-grid">
+                <div class="outcome-item">
+                    <h3>Industrial Automation</h3>
+                    <p>The system provides a cost-effective solution for wireless machine control in environments where radio frequency communication may be restricted or unreliable.</p>
+                </div>
+                <div class="outcome-item">
+                    <h3>Educational Platform</h3>
+                    <p>Serves as an excellent demonstration of digital communication principles, combining theoretical concepts with practical implementation and hands-on learning.</p>
+                </div>
+                <div class="outcome-item">
+                    <h3>Scalable Design</h3>
+                    <p>The modular architecture allows for easy expansion to support additional command sets, multiple channels, or integration with larger automation systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="project-navigation">
+        <div class="container">
+            <div class="nav-buttons">
+                <a href="motor-control-cart.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Previous Project
+                </a>
+                <a href="cb350-rebuild.html" class="btn btn-primary">
+                    Next Project <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 Brian Sahagian. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/brian-sahagian/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/briansahagian" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:briansahagian@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/script.js"></script>
+    <script src="../../assets/js/project-detail.js"></script>
+</body>
+</html>

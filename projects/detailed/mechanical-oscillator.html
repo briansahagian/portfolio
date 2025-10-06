@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Oscillator Analysis System - Brian Sahagian Portfolio</title>
+    <meta name="description" content="Advanced data acquisition system using linear potentiometers and LabVIEW for nonlinear mechanical system analysis">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/project-detail.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../index.html">Brian Sahagian</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">Back to Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../index.html#projects" class="nav-link">All Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-breadcrumb">
+                    <a href="../../index.html">Portfolio</a> / <a href="../../index.html#projects">Projects</a> / <span>Oscillator Analysis</span>
+                </div>
+                <h1 class="project-title">Mechanical Oscillator Analysis System</h1>
+                <p class="project-subtitle">Advanced data acquisition system using linear potentiometers and LabVIEW to characterize frequency response of nonlinear mechanical systems</p>
+                <div class="project-meta">
+                    <span class="meta-item"><i class="fas fa-calendar"></i> Class Project</span>
+                    <span class="meta-item"><i class="fas fa-user"></i> Individual Work</span>
+                    <span class="meta-item"><i class="fas fa-clock"></i> Multi-week Project</span>
+                </div>
+            </div>
+            <div class="project-hero-image">
+                <img src="../../assets/images/class-projects/linear-potentiometer/blockdiagram.png" alt="Oscillator Analysis System Block Diagram" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-section">
+        <div class="container">
+            <div class="section-grid">
+                <div class="content-section">
+                    <h2>Project Overview</h2>
+                    <p>
+                        This advanced experimental project demonstrates comprehensive characterization of nonlinear 
+                        mechanical oscillator systems using sophisticated data acquisition techniques. The system 
+                        employs linear potentiometers as displacement sensors integrated with LabVIEW for real-time 
+                        data collection and analysis, enabling detailed frequency response characterization and 
+                        uncertainty quantification.
+                    </p>
+                    <p>
+                        The project showcases proficiency in experimental design, data acquisition system development, 
+                        signal processing, and comprehensive uncertainty analysis. Through systematic experimentation 
+                        and statistical analysis, the system provides insights into complex mechanical behavior while 
+                        demonstrating rigorous engineering measurement practices.
+                    </p>
+                </div>
+                
+                <div class="project-info-card">
+                    <h3>System Specifications</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <strong>Sensors:</strong>
+                            <span>Linear Potentiometers</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>DAQ Software:</strong>
+                            <span>LabVIEW</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Analysis Tools:</strong>
+                            <span>MATLAB</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Sampling Rate:</strong>
+                            <span>1000 Hz</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Measurement Range:</strong>
+                            <span>±50mm displacement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Architecture -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2>System Architecture & Design</h2>
+            <div class="approach-grid">
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Data Acquisition System</h3>
+                    <p>Designed and implemented comprehensive LabVIEW-based data acquisition system with real-time signal processing, filtering, and automated measurement protocols.</p>
+                </div>
+                
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3>Signal Processing</h3>
+                    <p>Developed advanced signal processing algorithms for noise reduction, frequency domain analysis, and phase relationship characterization between input and response signals.</p>
+                </div>
+                
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Frequency Response Analysis</h3>
+                    <p>Implemented comprehensive frequency sweep protocols to characterize system behavior across wide frequency ranges with automated resonance detection and analysis.</p>
+                </div>
+                
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Uncertainty Quantification</h3>
+                    <p>Performed rigorous statistical analysis including measurement uncertainty quantification, confidence interval calculation, and systematic error identification and correction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation -->
+    <section class="project-section">
+        <div class="container">
+            <h2>Technical Implementation</h2>
+            <div class="content-grid">
+                <div class="content-item">
+                    <h3>Experimental Setup</h3>
+                    <p>The mechanical oscillator analysis system was designed with multiple measurement capabilities:</p>
+                    <ul>
+                        <li>Linear potentiometer displacement sensing with ±0.1mm accuracy</li>
+                        <li>Real-time data acquisition at 1000 Hz sampling rate</li>
+                        <li>Automated frequency sweep generation and control</li>
+                        <li>Multi-channel synchronous data collection</li>
+                    </ul>
+                </div>
+                
+                <div class="content-item">
+                    <h3>LabVIEW Programming</h3>
+                    <p>Comprehensive LabVIEW application development included:</p>
+                    <ul>
+                        <li>Real-time data acquisition and display interfaces</li>
+                        <li>Automated experimental protocol execution</li>
+                        <li>Signal conditioning and filtering algorithms</li>
+                        <li>Data logging and export functionality</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Analysis -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2>Data Analysis & Results</h2>
+            <div class="content-grid">
+                <div class="content-item">
+                    <h3>Frequency Response Characterization</h3>
+                    <p>Comprehensive analysis of mechanical system behavior revealed:</p>
+                    <ul>
+                        <li>Natural frequency identification with ±2% accuracy</li>
+                        <li>Damping ratio calculation through logarithmic decrement method</li>
+                        <li>Nonlinear behavior characterization at large amplitudes</li>
+                        <li>Phase relationship analysis between excitation and response</li>
+                    </ul>
+                </div>
+                
+                <div class="content-item">
+                    <h3>Uncertainty Analysis</h3>
+                    <p>Rigorous statistical analysis provided confidence in results:</p>
+                    <ul>
+                        <li>Type A uncertainty evaluation through repeated measurements</li>
+                        <li>Type B uncertainty assessment from instrument specifications</li>
+                        <li>Combined uncertainty calculation following GUM guidelines</li>
+                        <li>Expanded uncertainty reporting with 95% confidence intervals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="project-section">
+        <div class="container">
+            <h2>System Documentation Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('../../assets/images/class-projects/linear-potentiometer/blockdiagram.png')">
+                    <img src="../../assets/images/class-projects/linear-potentiometer/blockdiagram.png" alt="System Block Diagram">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('../../assets/images/class-projects/linear-potentiometer/setupdiagram.png')">
+                    <img src="../../assets/images/class-projects/linear-potentiometer/setupdiagram.png" alt="Experimental Setup">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('../../assets/images/class-projects/linear-potentiometer/oscillations.png')">
+                    <img src="../../assets/images/class-projects/linear-potentiometer/oscillations.png" alt="Oscillation Data">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('../../assets/images/class-projects/linear-potentiometer/phaseshift.png')">
+                    <img src="../../assets/images/class-projects/linear-potentiometer/phaseshift.png" alt="Phase Shift Analysis">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="project-section bg-light">
+        <div class="container">
+            <h2>Technical Skills Demonstrated</h2>
+            <div class="skills-section">
+                <div class="skills-category">
+                    <h3>Data Acquisition</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">LabVIEW Programming</span>
+                        <span class="skill-tag">Signal Conditioning</span>
+                        <span class="skill-tag">Real-time Systems</span>
+                        <span class="skill-tag">Sensor Integration</span>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>Analysis</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">Signal Processing</span>
+                        <span class="skill-tag">Statistical Analysis</span>
+                        <span class="skill-tag">Uncertainty Quantification</span>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>Engineering</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">System Dynamics</span>
+                        <span class="skill-tag">Experimental Design</span>
+                        <span class="skill-tag">Vibration Analysis</span>
+                        <span class="skill-tag">Measurement Science</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Results -->
+    <section class="project-section">
+        <div class="container">
+            <h2>Results & Engineering Impact</h2>
+            <div class="outcomes-grid">
+                <div class="outcome-item">
+                    <h3>System Characterization</h3>
+                    <p>Successfully characterized complex nonlinear mechanical behavior with quantified uncertainty, providing reliable data for engineering analysis and design decisions.</p>
+                </div>
+                <div class="outcome-item">
+                    <h3>Measurement Excellence</h3>
+                    <p>Achieved high-precision measurements with comprehensive uncertainty analysis following international standards, demonstrating mastery of measurement science principles.</p>
+                </div>
+                <div class="outcome-item">
+                    <h3>Technical Integration</h3>
+                    <p>Successfully integrated hardware sensors, software programming, and data analysis into cohesive measurement system demonstrating end-to-end engineering capabilities.</p>
+                </div>
+                <div class="outcome-item">
+                    <h3>Professional Documentation</h3>
+                    <p>Created comprehensive technical documentation including experimental procedures, analysis methods, and uncertainty budgets suitable for peer review and publication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for image viewing -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Navigation -->
+    <section class="project-navigation">
+        <div class="container">
+            <div class="nav-buttons">
+                <a href="gasket-manufacturing.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> Previous Project
+                </a>
+                <a href="../../index.html#projects" class="btn btn-primary">
+                    View All Projects
+                </a>
+                <a href="chess-piece-cnc.html" class="btn btn-outline">
+                    Next Project <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Brian Sahagian</h3>
+                    <p>Mechanical Engineering Student at Boston University</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/briansahagian" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/briansahagian" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:bsahag@bu.edu"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Brian Sahagian. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/project-detail.js"></script>
+</body>
+</html>

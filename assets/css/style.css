@@ -214,6 +214,155 @@ p {
     align-items: center;
 }
 
+.hero-photo {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: 70% 30%;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+    border: 5px solid white;
+}
+
+.about-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+    margin: 0 auto;
+    display: block;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 0 0 auto;
+    margin-left: 2rem;
+}
+
+.engine-photo {
+    width: 500px;
+    height: 500px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Personal Showcase Section */
+.personal-showcase {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.personal-showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+    pointer-events: none;
+}
+
+.showcase-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.showcase-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.showcase-header h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.showcase-header p {
+    font-size: 1.3rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.showcase-item {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    aspect-ratio: 1;
+    height: 400px;
+    width: 300px;
+}
+
+.showcase-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+    .showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .personal-showcase {
+        padding: 60px 0;
+    }
+    
+    .showcase-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
 .hero-placeholder {
     width: 300px;
     height: 300px;
@@ -393,8 +542,19 @@ section {
 
 .project-image {
     position: relative;
-    height: 200px;
+    height: 300px;
     overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
 }
 
 .project-placeholder {
@@ -468,6 +628,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .tech-tag {
@@ -477,6 +638,40 @@ section {
     border-radius: 15px;
     font-size: 0.85rem;
     font-weight: 500;
+}
+
+.project-actions {
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.see-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid #667eea;
+}
+
+.see-more-btn:hover {
+    background: #667eea;
+    color: white;
+    transform: translateX(5px);
+}
+
+.see-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.see-more-btn:hover i {
+    transform: translateX(3px);
 }
 
 /* Skills Section */
