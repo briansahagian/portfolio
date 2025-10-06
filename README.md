@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website designed specifically for engineering students to showcase their projects, skills, and achievements.
 
-🌐 **Live Demo**: [Visit Portfolio](https://briansahagian.github.io/portfolio2/)
+🌐 **Live Demo**: [Visit Portfolio](https://briansahagian.github.io/portfolio/)
 
 ## 🌟 Features
 
@@ -26,7 +26,7 @@ A modern, responsive portfolio website designed specifically for engineering stu
 ## 📁 Project Structure
 
 ```
-portfolio2/
+portfolio/
 │
 ├── index.html              # Main portfolio page
 ├── README.md              # Project documentation
