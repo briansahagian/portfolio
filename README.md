@@ -2,11 +2,14 @@
 
 A modern, responsive portfolio website designed specifically for engineering students to showcase their projects, skills, and achievements.
 
+🌐 **Live Demo**: [Visit Portfolio](https://briansahagian.github.io/portfolio2/)
+
 ## 🌟 Features
 
 - **Responsive Design**: Looks great on all devices (desktop, tablet, mobile)
 - **Modern UI/UX**: Clean, professional design with smooth animations
-- **Project Filtering**: Interactive filtering system for different project categories
+- **Project Showcase**: 12 detailed project pages with comprehensive documentation
+- **Photo Galleries**: Interactive image galleries with modal views
 - **Contact Form**: Functional contact form with validation
 - **Smooth Scrolling**: Seamless navigation between sections
 - **Performance Optimized**: Fast loading times with efficient code
@@ -18,36 +21,92 @@ A modern, responsive portfolio website designed specifically for engineering stu
 - **JavaScript (ES6+)**: Interactive functionality
 - **Font Awesome**: Professional icons
 - **Google Fonts**: Typography (Inter font family)
+- **GitHub Pages**: Free hosting and deployment
 
 ## 📁 Project Structure
 
 ```
 portfolio2/
 │
-├── index.html              # Main HTML file
+├── index.html              # Main portfolio page
 ├── README.md              # Project documentation
+├── .gitignore             # Git ignore file
+│
+├── .github/
+│   └── workflows/
+│       └── pages.yml      # GitHub Pages deployment workflow
 │
 ├── assets/
 │   ├── css/
-│   │   └── style.css      # Main stylesheet
+│   │   ├── style.css      # Main stylesheet
+│   │   └── project-detail.css # Project page styles
 │   ├── js/
-│   │   └── script.js      # Interactive functionality
-│   └── images/            # Image assets (add your photos here)
+│   │   ├── script.js      # Main site functionality
+│   │   └── project-detail.js # Project page interactions
+│   └── images/            # All project images organized by category
+│       ├── class-projects/
+│       ├── machine-shop/
+│       ├── personal-projects/
+│       └── personal/
 │
 └── projects/
-    └── README.md          # Project documentation and templates
+    └── detailed/          # Individual project pages
+        ├── gasket-manufacturing.html
+        ├── laser-communicator.html
+        ├── mechanical-oscillator.html
+        ├── chess-piece-cnc.html
+        ├── monet-machine.html
+        ├── motor-control-cart.html
+        ├── hdpe-coaster-cnc.html
+        ├── thermoformed-bins.html
+        ├── machine-maintenance.html
+        ├── cb350-rebuild.html
+        ├── jeep-maintenance.html
+        └── panasonic-bike.html
 ```
 
-## 🚀 Quick Start
+## 🚀 GitHub Pages Deployment
 
-1. **Clone or Download**: Get the project files to your local machine
-2. **Customize Content**: Update personal information in `index.html`
-3. **Add Your Projects**: Replace example projects with your own
-4. **Add Images**: Place your photos in the `assets/images/` folder
-5. **Update Links**: Add your actual social media and project links
-6. **Test Locally**: Open `index.html` in your web browser
+This portfolio is configured for automatic deployment to GitHub Pages:
+
+### Quick Setup:
+1. **Fork this repository** or create a new repository with these files
+2. **Enable GitHub Pages**:
+   - Go to repository Settings
+   - Navigate to Pages section
+   - Set Source to "GitHub Actions"
+3. **Push to main branch** - deployment happens automatically
+4. **Access your site** at: `https://yourusername.github.io/repository-name/`
+
+### Automatic Deployment:
+- ✅ Deploys automatically on every push to main branch
+- ✅ Uses GitHub Actions workflow (`.github/workflows/pages.yml`)
+- ✅ No build process required - pure HTML/CSS/JS
+- ✅ Fast deployment (usually under 2 minutes)
 
 ## ✏️ Customization Guide
+
+### Personal Information:
+1. **Update `index.html`**:
+   - Change name, title, and bio in the hero section
+   - Update contact information
+   - Replace social media links
+
+2. **Project Content**:
+   - Modify project descriptions and details
+   - Update project links and repositories
+   - Replace project images in `assets/images/`
+
+3. **Styling**:
+   - Customize colors in `assets/css/style.css`
+   - Modify fonts and spacing as needed
+   - Add your own brand colors
+
+### Adding New Projects:
+1. **Create new project page** in `projects/detailed/`
+2. **Add project images** to appropriate folder in `assets/images/`
+3. **Update main portfolio** page with new project card
+4. **Test locally** before pushing to GitHub
 
 ### Personal Information
 Update these sections in `index.html`:
