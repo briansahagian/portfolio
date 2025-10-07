@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navigation functionality
     initNavigation();
     
+    // Dynamic navbar height adjustment
+    initDynamicNavbarPadding();
+    
     // Project filtering
     initProjectFiltering();
     
@@ -102,6 +105,38 @@ function initNavigation() {
     // Navigation is now permanently visible on all screen sizes
     // No toggle functionality needed for mobile-first approach
     console.log('Navigation initialized - permanently visible');
+}
+
+// Dynamic Navbar Height Adjustment
+function initDynamicNavbarPadding() {
+    function updateScrollPadding() {
+        const navbar = document.getElementById('navbar');
+        if (navbar) {
+            const navbarHeight = navbar.offsetHeight;
+            const extraPadding = 20; // Add some extra padding for visual comfort
+            const totalPadding = navbarHeight + extraPadding;
+            
+            // Update the scroll-padding-top for smooth scrolling
+            document.documentElement.style.scrollPaddingTop = totalPadding + 'px';
+            
+            // Also update the hero section padding to prevent initial overlap
+            const heroSection = document.querySelector('.hero');
+            if (heroSection) {
+                heroSection.style.paddingTop = totalPadding + 'px';
+            }
+            
+            console.log(`Updated scroll padding to ${totalPadding}px (navbar: ${navbarHeight}px + ${extraPadding}px extra)`);
+        }
+    }
+    
+    // Update padding on load
+    updateScrollPadding();
+    
+    // Update padding on window resize (in case navbar height changes)
+    window.addEventListener('resize', updateScrollPadding);
+    
+    // Update padding after fonts load (in case text affects navbar height)
+    document.fonts.ready.then(updateScrollPadding);
 }
 
 // Project Filtering
@@ -334,8 +369,8 @@ function showNotification(message, type) {
 function initScrollAnimations() {
     // Add intersection observer for fade-in animations
     const observerOptions = {
-        threshold: 0.05, // Reduced from 0.1 to trigger earlier
-        rootMargin: '50px 0px 0px 0px' // Trigger 50px before entering viewport
+        threshold: 0.01, // Reduced from 0.05 to trigger even earlier
+        rootMargin: '150px 0px 0px 0px' // Increased from 50px to 150px - trigger much earlier
     };
     
     const observer = new IntersectionObserver(function(entries) {
@@ -353,11 +388,11 @@ function initScrollAnimations() {
         observer.observe(section);
     });
     
-    // Observe project cards with medium-speed animations
+    // Observe project cards with faster animations
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
         card.classList.add('fade-in');
-        card.style.transitionDelay = `${index * 0.07}s`; // Medium speed between 0.05s and 0.1s
+        card.style.transitionDelay = `${index * 0.04}s`; // Reduced from 0.07s to 0.04s for faster appearance
         observer.observe(card);
     });
     
@@ -365,7 +400,7 @@ function initScrollAnimations() {
     const skillItems = document.querySelectorAll('.skill-item');
     skillItems.forEach((item, index) => {
         item.classList.add('fade-in');
-        item.style.transitionDelay = `${index * 0.04}s`; // Medium speed between 0.03s and 0.05s
+        item.style.transitionDelay = `${index * 0.02}s`; // Reduced from 0.04s to 0.02s for faster appearance
         observer.observe(item);
     });
 }

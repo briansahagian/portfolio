@@ -13,8 +13,7 @@ html {
     /* Prevent horizontal overflow */
     overflow-x: hidden;
     width: 100%;
-    /* Account for fixed navbar when scrolling to anchors */
-    scroll-padding-top: 80px;
+    /* Scroll padding will be set dynamically by JavaScript */
 }
 
 body {
@@ -1203,10 +1202,6 @@ section {
         max-width: 100vw;
     }
     
-    html {
-        scroll-padding-top: 60px; /* Adjust for mobile navbar height */
-    }
-    
     .container {
         padding: 0 15px;
         width: 100%;
@@ -1255,10 +1250,6 @@ section {
     }
 
     /* Hero section mobile fixes */
-    .hero {
-        padding: 80px 0 50px; /* Reduce top padding since navbar is smaller on mobile */
-    }
-
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1417,8 +1408,28 @@ section {
         max-width: 100vw;
     }
     
-    html {
-        scroll-padding-top: 50px; /* Even smaller for very mobile screens */
+    /* Ultra-compact navigation for narrow screens */
+    .navbar {
+        padding: 6px 0; /* Reduce navbar height */
+    }
+    
+    .nav-container {
+        padding: 0 8px; /* Reduce side padding */
+        gap: 6px; /* Reduce gap between logo and menu */
+    }
+    
+    .nav-logo a {
+        font-size: 14px; /* Smaller logo text */
+    }
+    
+    .nav-menu {
+        gap: 0.1rem; /* Minimal gap between nav items */
+    }
+    
+    .nav-link {
+        padding: 6px 8px; /* More compact padding */
+        font-size: 12px; /* Smaller text */
+        white-space: nowrap; /* Prevent text wrapping */
     }
     
     .container {
@@ -1432,10 +1443,6 @@ section {
         max-width: 100%;
         word-wrap: break-word;
         overflow-wrap: break-word;
-    }
-
-    .hero {
-        padding: 70px 0 40px; /* Even smaller padding for small mobile */
     }
 
     .hero-title {
@@ -1590,7 +1597,7 @@ section {
         padding: 0;
         position: static;
         box-shadow: none;
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* Allow wrapping to second line when needed */
         justify-content: flex-end;
         align-items: center;
     }
@@ -1664,20 +1671,49 @@ section {
 @media (max-width: 320px) {
     .nav-container {
         padding: 0 5px;
-        gap: 5px;
+        gap: 4px; /* Minimal gap */
     }
     
     .nav-logo a {
-        font-size: 14px;
+        font-size: 12px; /* Very small logo */
     }
     
     .nav-menu {
-        gap: 0.2rem;
+        gap: 0.1rem; /* Minimal gap between items */
+        flex-shrink: 1; /* Allow menu to shrink if needed */
     }
     
     .nav-link {
-        padding: 6px 8px;
-        font-size: 12px;
+        padding: 4px 6px; /* Very compact padding */
+        font-size: 10px; /* Very small text */
+        white-space: nowrap; /* Prevent wrapping */
+        flex-shrink: 1; /* Allow links to shrink if needed */
+    }
+}
+
+/* Ultra small screens (max-width: 280px) */
+@media (max-width: 280px) {
+    .navbar {
+        padding: 4px 0; /* Minimal navbar height */
+    }
+    
+    .nav-container {
+        padding: 0 3px;
+        gap: 2px;
+    }
+    
+    .nav-logo a {
+        font-size: 11px;
+    }
+    
+    .nav-menu {
+        gap: 0.05rem; /* Almost no gap */
+    }
+    
+    .nav-link {
+        padding: 3px 4px; /* Extremely compact */
+        font-size: 9px; /* Very small text */
+        border-radius: 2px;
     }
 }
 
@@ -1693,7 +1729,7 @@ section {
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.6s ease;
+    transition: all 0.4s ease; /* Reduced from 0.6s to 0.4s for faster animation */
 }
 
 .fade-in.visible {
