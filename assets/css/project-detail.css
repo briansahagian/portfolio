@@ -50,7 +50,7 @@ html, body {
 }
 
 .project-breadcrumb a {
-    color: #667eea;
+    color: #d84315;
     text-decoration: none;
 }
 
@@ -87,7 +87,7 @@ html, body {
 }
 
 .meta-item i {
-    color: #667eea;
+    color: #d84315;
 }
 
 .project-hero-image {
@@ -188,7 +188,7 @@ html, body {
 .step-number {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #d84315 0%, #bf360c 100%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -257,7 +257,7 @@ html, body {
 .skills-tags .skill-tag:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    border-color: #667eea;
+    border-color: #d84315;
 }
 
 /* Project Navigation Improvements */
@@ -376,7 +376,7 @@ html, body {
 
 .contribution-item i {
     font-size: 2.5rem;
-    color: #667eea;
+    color: #d84315;
     margin-bottom: 1.5rem;
 }
 
@@ -429,12 +429,12 @@ html, body {
 
 .gallery-placeholder {
     grid-column: 1 / -1;
-    background: #f0f3ff;
-    border: 2px dashed #667eea;
+    background: #fbe9e7;
+    border: 2px dashed #d84315;
     border-radius: 15px;
     padding: 4rem 2rem;
     text-align: center;
-    color: #667eea;
+    color: #d84315;
 }
 
 .gallery-placeholder i {
@@ -472,8 +472,8 @@ html, body {
 }
 
 .skill-tag {
-    background: #f0f3ff;
-    color: #667eea;
+    background: #fbe9e7;
+    color: #d84315;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -482,7 +482,7 @@ html, body {
 }
 
 .skill-tag:hover {
-    background: #667eea;
+    background: #d84315;
     color: white;
     transform: translateY(-2px);
 }
@@ -665,8 +665,8 @@ html, body {
 }
 
 .skill-tag {
-    background: #f0f3ff;
-    color: #667eea;
+    background: #fbe9e7;
+    color: #d84315;
     padding: 12px 24px;
     border-radius: 25px;
     font-size: 0.9rem;
@@ -676,10 +676,10 @@ html, body {
 }
 
 .skill-tag:hover {
-    background: #667eea;
+    background: #d84315;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
 }
 
 /* Video Section Styles */
@@ -887,7 +887,7 @@ html, body {
 
 .indicator.active,
 .indicator:hover {
-    background: #667eea;
+    background: #d84315;
 }
 
 @keyframes slideIn {
@@ -972,7 +972,7 @@ html, body {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #d84315;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 

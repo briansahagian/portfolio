@@ -137,6 +137,24 @@ function initDynamicNavbarPadding() {
     
     // Update padding after fonts load (in case text affects navbar height)
     document.fonts.ready.then(updateScrollPadding);
+    
+    // Also update when navbar visibility changes
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    // Small delay to ensure transition is complete
+                    setTimeout(updateScrollPadding, 50);
+                }
+            });
+        });
+        
+        observer.observe(navbar, {
+            attributes: true,
+            attributeFilter: ['class']
+        });
+    }
 }
 
 // Project Filtering
@@ -408,16 +426,82 @@ function initScrollAnimations() {
 // Navbar Scroll Effect
 function initNavbarScrollEffect() {
     const navbar = document.getElementById('navbar');
+    const navIndicator = document.getElementById('nav-indicator');
+    const navIndicatorBtn = document.getElementById('nav-indicator-btn');
+    let lastScrollY = 0;
+    let ticking = false;
     
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
+    // Handle nav indicator click
+    if (navIndicatorBtn) {
+        navIndicatorBtn.addEventListener('click', function() {
+            // Show navbar
+            navbar.classList.remove('navbar-hidden');
+            // Hide indicator
+            navIndicator.classList.remove('visible');
+            // Scroll to top for better UX
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+    
+    function updateNavbar() {
+        const currentScrollY = window.scrollY;
+        const scrollingDown = currentScrollY > lastScrollY;
+        const scrollingUp = currentScrollY < lastScrollY;
+        
+        // Standard scrolled effect (background change)
+        if (currentScrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
         
+        // Mobile scroll direction behavior
+        if (window.innerWidth <= 768) {
+            if (scrollingDown && currentScrollY > 100) {
+                // Scrolling down - hide navbar, show indicator
+                navbar.classList.add('navbar-hidden');
+                if (navIndicator) {
+                    navIndicator.classList.add('visible');
+                }
+            } else if (scrollingUp || currentScrollY <= 100) {
+                // Scrolling up or near top - show navbar, hide indicator
+                navbar.classList.remove('navbar-hidden');
+                if (navIndicator) {
+                    navIndicator.classList.remove('visible');
+                }
+            }
+        } else {
+            // Desktop - always show navbar, hide indicator
+            navbar.classList.remove('navbar-hidden');
+            if (navIndicator) {
+                navIndicator.classList.remove('visible');
+            }
+        }
+        
+        lastScrollY = currentScrollY;
+        ticking = false;
+        
         // Update active nav link based on scroll position
         updateActiveNavOnScroll();
+    }
+    
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateNavbar);
+            ticking = true;
+        }
+    }
+    
+    window.addEventListener('scroll', requestTick);
+    
+    // Also check on resize in case screen size changes
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            navbar.classList.remove('navbar-hidden');
+            if (navIndicator) {
+                navIndicator.classList.remove('visible');
+            }
+        }
     });
 }
 
