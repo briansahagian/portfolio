@@ -155,23 +155,34 @@ function initContactForm() {
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
             
-            // Send email using EmailJS
+            // Send email using EmailJS with proper template parameters
             const templateParams = {
                 from_name: name,
                 from_email: email,
                 subject: subject,
-                message: message,
-                to_email: 'briansahagian@gmail.com'
+                message: message
             };
             
-            emailjs.send('service_0d23sae', 'template_dgbyyzt', templateParams)
+            console.log('Sending email with params:', templateParams);
+            
+            emailjs.send('service_0d23sae', 'template_bolx0oo', templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
                     contactForm.reset();
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    showNotification('Failed to send message. Please try again or contact me directly.', 'error');
+                })
+                .catch(function(error) {
+                    console.error('EmailJS Error:', error);
+                    // More detailed error message
+                    let errorMsg = 'Failed to send message. ';
+                    if (error.text) {
+                        errorMsg += 'Error: ' + error.text;
+                    } else if (error.status) {
+                        errorMsg += 'Status: ' + error.status;
+                    } else {
+                        errorMsg += 'Please check your internet connection and try again.';
+                    }
+                    showNotification(errorMsg, 'error');
                 })
                 .finally(function() {
                     submitButton.textContent = originalText;
