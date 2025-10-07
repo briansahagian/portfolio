@@ -1,5 +1,10 @@
+// Immediate execution to verify script is loading
+console.log('script.js file loaded successfully!');
+
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM Content Loaded - script.js executing'); // Debug log
+    
     // Navigation functionality
     initNavigation();
     
@@ -17,7 +22,80 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Navbar scroll effect
     initNavbarScrollEffect();
+    
+    // Initialize lightbox
+    initLightbox();
+    
+    console.log('All initialization functions called'); // Debug log
 });
+
+// Initialize Lightbox Event Listeners
+function initLightbox() {
+    console.log('Initializing lightbox...'); // Debug log
+    
+    // Add click event listeners to all work photos
+    const workPhotos = document.querySelectorAll('.work-photo[data-lightbox="true"]');
+    console.log('Found', workPhotos.length, 'work photos with data-lightbox="true"'); // Debug log
+    
+    // Also try finding all work photos regardless of data attribute
+    const allWorkPhotos = document.querySelectorAll('.work-photo');
+    console.log('Found', allWorkPhotos.length, 'total work photos'); // Debug log
+    
+    if (workPhotos.length === 0) {
+        console.warn('No work photos found with data-lightbox attribute!');
+        console.log('Trying to add listeners to all work photos instead...');
+        
+        allWorkPhotos.forEach((photo, index) => {
+            console.log('Adding listener to photo', index, ':', photo.src);
+            photo.addEventListener('click', function() {
+                console.log('Photo clicked (fallback):', this.src, this.alt);
+                openLightbox(this.src, this.alt);
+            });
+        });
+    } else {
+        workPhotos.forEach((photo, index) => {
+            console.log('Adding listener to photo', index, ':', photo.src);
+            photo.addEventListener('click', function() {
+                console.log('Photo clicked:', this.src, this.alt);
+                openLightbox(this.src, this.alt);
+            });
+        });
+    }
+}
+
+// Global Lightbox Functions (available immediately)
+function openLightbox(src, alt) {
+    console.log('openLightbox called with:', src, alt); // Debug log
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    
+    console.log('lightbox element:', lightbox); // Debug log
+    console.log('lightboxImage element:', lightboxImage); // Debug log
+    
+    if (lightbox && lightboxImage) {
+        lightboxImage.src = src;
+        lightboxImage.alt = alt;
+        lightbox.classList.add('active');
+        
+        // Prevent body scrolling when lightbox is open
+        document.body.style.overflow = 'hidden';
+        console.log('Lightbox opened successfully'); // Debug log
+    } else {
+        console.error('Lightbox elements not found'); // Debug log
+    }
+}
+
+function closeLightbox() {
+    console.log('closeLightbox called'); // Debug log
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.classList.remove('active');
+        
+        // Restore body scrolling
+        document.body.style.overflow = 'auto';
+        console.log('Lightbox closed successfully'); // Debug log
+    }
+}
 
 // Navigation Functions
 function initNavigation() {
@@ -279,8 +357,8 @@ function showNotification(message, type) {
 function initScrollAnimations() {
     // Add intersection observer for fade-in animations
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05, // Reduced from 0.1 to trigger earlier
+        rootMargin: '50px 0px 0px 0px' // Trigger 50px before entering viewport
     };
     
     const observer = new IntersectionObserver(function(entries) {
@@ -298,11 +376,11 @@ function initScrollAnimations() {
         observer.observe(section);
     });
     
-    // Observe project cards
+    // Observe project cards with medium-speed animations
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
         card.classList.add('fade-in');
-        card.style.transitionDelay = `${index * 0.1}s`;
+        card.style.transitionDelay = `${index * 0.07}s`; // Medium speed between 0.05s and 0.1s
         observer.observe(card);
     });
     
@@ -310,7 +388,7 @@ function initScrollAnimations() {
     const skillItems = document.querySelectorAll('.skill-item');
     skillItems.forEach((item, index) => {
         item.classList.add('fade-in');
-        item.style.transitionDelay = `${index * 0.05}s`;
+        item.style.transitionDelay = `${index * 0.04}s`; // Medium speed between 0.03s and 0.05s
         observer.observe(item);
     });
 }
@@ -510,6 +588,27 @@ function initLazyLoading() {
     
     images.forEach(img => imageObserver.observe(img));
 }
+
+// Close lightbox when clicking outside the image
+document.addEventListener('click', function(e) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.querySelector('.lightbox-content');
+    
+    if (lightbox && lightbox.classList.contains('active') && 
+        lightboxContent && !lightboxContent.contains(e.target)) {
+        closeLightbox();
+    }
+});
+
+// Close lightbox with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const lightbox = document.getElementById('lightbox');
+        if (lightbox && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    }
+});
 
 // Call lazy loading when DOM is ready
 document.addEventListener('DOMContentLoaded', initLazyLoading);
