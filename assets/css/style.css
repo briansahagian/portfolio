@@ -806,7 +806,7 @@ section {
     content: '';
     position: absolute;
     left: 0;
-    right: 60%;
+    right: calc(50% + 160px);
     top: 50%;
     height: 1px;
     background: linear-gradient(to right, transparent, rgba(216, 67, 21, 0.3), transparent);
@@ -815,7 +815,7 @@ section {
 .project-section-break::after {
     content: '';
     position: absolute;
-    left: 60%;
+    left: calc(50% + 160px);
     right: 0;
     top: 50%;
     height: 1px;
@@ -1445,6 +1445,20 @@ section {
         width: 100%;
         max-width: 100%;
         margin: 1rem 0;
+    }
+
+    /* Project section breaks mobile fixes */
+    .project-section-break::before {
+        right: calc(50% + 100px);
+    }
+
+    .project-section-break::after {
+        left: calc(50% + 100px);
+    }
+
+    .project-section-title {
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
     }
 
     /* Footer mobile fixes */
