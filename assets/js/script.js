@@ -161,6 +161,7 @@ function initDynamicNavbarPadding() {
 function initProjectFiltering() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
+    const sectionBreaks = document.querySelectorAll('.project-section-break');
     
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -182,6 +183,17 @@ function initProjectFiltering() {
                 } else {
                     card.classList.add('hidden');
                     card.style.display = 'none';
+                }
+            });
+            
+            // Handle section breaks based on active filter
+            sectionBreaks.forEach(sectionBreak => {
+                const sectionCategory = sectionBreak.getAttribute('data-category');
+                
+                if (filter === 'all' || filter === sectionCategory) {
+                    sectionBreak.style.display = '';
+                } else {
+                    sectionBreak.style.display = 'none';
                 }
             });
         });
@@ -438,8 +450,6 @@ function initNavbarScrollEffect() {
             navbar.classList.remove('navbar-hidden');
             // Hide indicator
             navIndicator.classList.remove('visible');
-            // Scroll to top for better UX
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
     
