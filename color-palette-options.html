@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Color Palette Options</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: #f8f9fa;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+        }
+        
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .palette-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .palette-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .palette-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .color-swatches {
+            display: flex;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .color-swatch {
+            flex: 1;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .palette-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+            text-align: center;
+        }
+        
+        .color-codes {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+        }
+        
+        .current-palette {
+            border: 3px solid #2e7d32;
+            position: relative;
+        }
+        
+        .current-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #2e7d32;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Portfolio Color Palette Options</h1>
+        
+        <div class="palette-grid">
+            <!-- Current Forest Green -->
+            <div class="palette-card current-palette">
+                <div class="current-badge">CURRENT</div>
+                <div class="palette-name">🌲 Forest Green</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #2e7d32;">#2e7d32</div>
+                    <div class="color-swatch" style="background: #00695c;">#00695c</div>
+                    <div class="color-swatch" style="background: #e8f5e8; color: #333;">#e8f5e8</div>
+                </div>
+                <div class="palette-description">
+                    Professional nature-inspired theme. Calm, trustworthy, and modern.
+                </div>
+                <div class="color-codes">
+                    Primary: #2e7d32<br>
+                    Secondary: #00695c<br>
+                    Light: #e8f5e8
+                </div>
+            </div>
+
+            <!-- Ocean Blue -->
+            <div class="palette-card">
+                <div class="palette-name">🌊 Ocean Blue</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #1565c0;">#1565c0</div>
+                    <div class="color-swatch" style="background: #0277bd;">#0277bd</div>
+                    <div class="color-swatch" style="background: #e3f2fd; color: #333;">#e3f2fd</div>
+                </div>
+                <div class="palette-description">
+                    Deep, professional blue reminiscent of ocean depths. Trustworthy and corporate.
+                </div>
+                <div class="color-codes">
+                    Primary: #1565c0<br>
+                    Secondary: #0277bd<br>
+                    Light: #e3f2fd
+                </div>
+            </div>
+
+            <!-- Sunset Orange -->
+            <div class="palette-card">
+                <div class="palette-name">🌅 Sunset Orange</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #d84315;">#d84315</div>
+                    <div class="color-swatch" style="background: #bf360c;">#bf360c</div>
+                    <div class="color-swatch" style="background: #fbe9e7; color: #333;">#fbe9e7</div>
+                </div>
+                <div class="palette-description">
+                    Warm, energetic orange that conveys creativity and innovation. Bold and memorable.
+                </div>
+                <div class="color-codes">
+                    Primary: #d84315<br>
+                    Secondary: #bf360c<br>
+                    Light: #fbe9e7
+                </div>
+            </div>
+
+            <!-- Royal Purple -->
+            <div class="palette-card">
+                <div class="palette-name">👑 Royal Purple</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #6a1b9a;">#6a1b9a</div>
+                    <div class="color-swatch" style="background: #4a148c;">#4a148c</div>
+                    <div class="color-swatch" style="background: #f3e5f5; color: #333;">#f3e5f5</div>
+                </div>
+                <div class="palette-description">
+                    Sophisticated purple that suggests luxury and creativity. Perfect for tech professionals.
+                </div>
+                <div class="color-codes">
+                    Primary: #6a1b9a<br>
+                    Secondary: #4a148c<br>
+                    Light: #f3e5f5
+                </div>
+            </div>
+
+            <!-- Charcoal Gray -->
+            <div class="palette-card">
+                <div class="palette-name">⚫ Modern Charcoal</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #424242;">#424242</div>
+                    <div class="color-swatch" style="background: #212121;">#212121</div>
+                    <div class="color-swatch" style="background: #f5f5f5; color: #333;">#f5f5f5</div>
+                </div>
+                <div class="palette-description">
+                    Sleek, modern monochrome. Timeless and professional with high contrast.
+                </div>
+                <div class="color-codes">
+                    Primary: #424242<br>
+                    Secondary: #212121<br>
+                    Light: #f5f5f5
+                </div>
+            </div>
+
+            <!-- Crimson Red -->
+            <div class="palette-card">
+                <div class="palette-name">🔥 Crimson Red</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #c62828;">#c62828</div>
+                    <div class="color-swatch" style="background: #b71c1c;">#b71c1c</div>
+                    <div class="color-swatch" style="background: #ffebee; color: #333;">#ffebee</div>
+                </div>
+                <div class="palette-description">
+                    Bold, confident red that commands attention. Strong and dynamic for impact.
+                </div>
+                <div class="color-codes">
+                    Primary: #c62828<br>
+                    Secondary: #b71c1c<br>
+                    Light: #ffebee
+                </div>
+            </div>
+
+            <!-- Teal Green -->
+            <div class="palette-card">
+                <div class="palette-name">💎 Emerald Teal</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #00695c;">#00695c</div>
+                    <div class="color-swatch" style="background: #004d40;">#004d40</div>
+                    <div class="color-swatch" style="background: #e0f2f1; color: #333;">#e0f2f1</div>
+                </div>
+                <div class="palette-description">
+                    Sophisticated teal-green blend. Balances trust and innovation perfectly.
+                </div>
+                <div class="color-codes">
+                    Primary: #00695c<br>
+                    Secondary: #004d40<br>
+                    Light: #e0f2f1
+                </div>
+            </div>
+
+            <!-- Golden Amber -->
+            <div class="palette-card">
+                <div class="palette-name">✨ Golden Amber</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #ff8f00;">#ff8f00</div>
+                    <div class="color-swatch" style="background: #e65100;">#e65100</div>
+                    <div class="color-swatch" style="background: #fff8e1; color: #333;">#fff8e1</div>
+                </div>
+                <div class="palette-description">
+                    Warm, optimistic golden tones. Suggests success and premium quality.
+                </div>
+                <div class="color-codes">
+                    Primary: #ff8f00<br>
+                    Secondary: #e65100<br>
+                    Light: #fff8e1
+                </div>
+            </div>
+
+            <!-- Midnight Blue -->
+            <div class="palette-card">
+                <div class="palette-name">🌙 Midnight Blue</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #1a237e;">#1a237e</div>
+                    <div class="color-swatch" style="background: #0d47a1;">#0d47a1</div>
+                    <div class="color-swatch" style="background: #e8eaf6; color: #333;">#e8eaf6</div>
+                </div>
+                <div class="palette-description">
+                    Deep, sophisticated navy blue. Professional and authoritative with elegance.
+                </div>
+                <div class="color-codes">
+                    Primary: #1a237e<br>
+                    Secondary: #0d47a1<br>
+                    Light: #e8eaf6
+                </div>
+            </div>
+
+            <!-- Cream & Espresso -->
+            <div class="palette-card">
+                <div class="palette-name">☕ Cream & Espresso</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #5d4037; color: white;">#5d4037</div>
+                    <div class="color-swatch" style="background: #3e2723; color: white;">#3e2723</div>
+                    <div class="color-swatch" style="background: #faf8f5; color: #333;">#faf8f5</div>
+                </div>
+                <div class="palette-description">
+                    Warm neutral tones with rich coffee browns. Sophisticated and inviting.
+                </div>
+                <div class="color-codes">
+                    Primary: #5d4037<br>
+                    Secondary: #3e2723<br>
+                    Light: #faf8f5
+                </div>
+            </div>
+
+            <!-- Warm Gray -->
+            <div class="palette-card">
+                <div class="palette-name">🕊️ Warm Stone</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #6d4c41; color: white;">#6d4c41</div>
+                    <div class="color-swatch" style="background: #4e342e; color: white;">#4e342e</div>
+                    <div class="color-swatch" style="background: #f7f5f3; color: #333;">#f7f5f3</div>
+                </div>
+                <div class="palette-description">
+                    Soft stone-inspired neutrals. Timeless elegance with natural warmth.
+                </div>
+                <div class="color-codes">
+                    Primary: #6d4c41<br>
+                    Secondary: #4e342e<br>
+                    Light: #f7f5f3
+                </div>
+            </div>
+
+            <!-- Sage & Ivory -->
+            <div class="palette-card">
+                <div class="palette-name">🌿 Sage & Ivory</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #8d6e63; color: white;">#8d6e63</div>
+                    <div class="color-swatch" style="background: #5d4037; color: white;">#5d4037</div>
+                    <div class="color-swatch" style="background: #fefefe; color: #333;">#fefefe</div>
+                </div>
+                <div class="palette-description">
+                    Muted earth tones with pure ivory. Clean, minimal, and naturally elegant.
+                </div>
+                <div class="color-codes">
+                    Primary: #8d6e63<br>
+                    Secondary: #5d4037<br>
+                    Light: #fefefe
+                </div>
+            </div>
+
+            <!-- Platinum & Charcoal -->
+            <div class="palette-card">
+                <div class="palette-name">💠 Platinum & Charcoal</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #546e7a; color: white;">#546e7a</div>
+                    <div class="color-swatch" style="background: #37474f; color: white;">#37474f</div>
+                    <div class="color-swatch" style="background: #fafafa; color: #333;">#fafafa</div>
+                </div>
+                <div class="palette-description">
+                    Cool gray neutrals with subtle blue undertones. Modern and sophisticated.
+                </div>
+                <div class="color-codes">
+                    Primary: #546e7a<br>
+                    Secondary: #37474f<br>
+                    Light: #fafafa
+                </div>
+            </div>
+
+            <!-- Linen & Slate -->
+            <div class="palette-card">
+                <div class="palette-name">🎨 Linen & Slate</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #78909c; color: white;">#78909c</div>
+                    <div class="color-swatch" style="background: #455a64; color: white;">#455a64</div>
+                    <div class="color-swatch" style="background: #f8f6f0; color: #333;">#f8f6f0</div>
+                </div>
+                <div class="palette-description">
+                    Soft slate blues with warm linen whites. Balanced and calming neutrals.
+                </div>
+                <div class="color-codes">
+                    Primary: #78909c<br>
+                    Secondary: #455a64<br>
+                    Light: #f8f6f0
+                </div>
+            </div>
+
+            <!-- Mushroom & Pearl -->
+            <div class="palette-card">
+                <div class="palette-name">🍄 Mushroom & Pearl</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #8d6e63; color: white;">#8d6e63</div>
+                    <div class="color-swatch" style="background: #6d4c41; color: white;">#6d4c41</div>
+                    <div class="color-swatch" style="background: #f9f7f4; color: #333;">#f9f7f4</div>
+                </div>
+                <div class="palette-description">
+                    Earthy mushroom browns with pearl whites. Organic and sophisticated.
+                </div>
+                <div class="color-codes">
+                    Primary: #8d6e63<br>
+                    Secondary: #6d4c41<br>
+                    Light: #f9f7f4
+                </div>
+            </div>
+
+            <!-- Dove Gray -->
+            <div class="palette-card">
+                <div class="palette-name">🕊️ Dove Gray</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #607d8b; color: white;">#607d8b</div>
+                    <div class="color-swatch" style="background: #455a64; color: white;">#455a64</div>
+                    <div class="color-swatch" style="background: #f5f5f5; color: #333;">#f5f5f5</div>
+                </div>
+                <div class="palette-description">
+                    Gentle gray blues with crisp whites. Professional and universally appealing.
+                </div>
+                <div class="color-codes">
+                    Primary: #607d8b<br>
+                    Secondary: #455a64<br>
+                    Light: #f5f5f5
+                </div>
+            </div>
+
+            <!-- Rose Gold -->
+            <div class="palette-card">
+                <div class="palette-name">🌹 Rose Gold</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #d81b60; color: white;">#d81b60</div>
+                    <div class="color-swatch" style="background: #ad1457; color: white;">#ad1457</div>
+                    <div class="color-swatch" style="background: #fce4ec; color: #333;">#fce4ec</div>
+                </div>
+                <div class="palette-description">
+                    Elegant rose gold tones. Modern, trendy, and sophisticated with warmth.
+                </div>
+                <div class="color-codes">
+                    Primary: #d81b60<br>
+                    Secondary: #ad1457<br>
+                    Light: #fce4ec
+                </div>
+            </div>
+
+            <!-- Copper & Bronze -->
+            <div class="palette-card">
+                <div class="palette-name">⚡ Copper & Bronze</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #a0522d; color: white;">#a0522d</div>
+                    <div class="color-swatch" style="background: #8b4513; color: white;">#8b4513</div>
+                    <div class="color-swatch" style="background: #faf6f2; color: #333;">#faf6f2</div>
+                </div>
+                <div class="palette-description">
+                    Rich metallic earth tones. Industrial strength meets natural warmth.
+                </div>
+                <div class="color-codes">
+                    Primary: #a0522d<br>
+                    Secondary: #8b4513<br>
+                    Light: #faf6f2
+                </div>
+            </div>
+
+            <!-- Lavender Gray -->
+            <div class="palette-card">
+                <div class="palette-name">💜 Lavender Gray</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #7986cb; color: white;">#7986cb</div>
+                    <div class="color-swatch" style="background: #5c6bc0; color: white;">#5c6bc0</div>
+                    <div class="color-swatch" style="background: #f3f4ff; color: #333;">#f3f4ff</div>
+                </div>
+                <div class="palette-description">
+                    Soft purple-gray blend. Creative yet professional with a modern tech feel.
+                </div>
+                <div class="color-codes">
+                    Primary: #7986cb<br>
+                    Secondary: #5c6bc0<br>
+                    Light: #f3f4ff
+                </div>
+            </div>
+
+            <!-- Forest Mint -->
+            <div class="palette-card">
+                <div class="palette-name">🌱 Forest Mint</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #26a69a; color: white;">#26a69a</div>
+                    <div class="color-swatch" style="background: #00695c; color: white;">#00695c</div>
+                    <div class="color-swatch" style="background: #e0f2f1; color: #333;">#e0f2f1</div>
+                </div>
+                <div class="palette-description">
+                    Fresh mint green with forest depth. Natural innovation and growth focused.
+                </div>
+                <div class="color-codes">
+                    Primary: #26a69a<br>
+                    Secondary: #00695c<br>
+                    Light: #e0f2f1
+                </div>
+            </div>
+
+            <!-- Steel Blue -->
+            <div class="palette-card">
+                <div class="palette-name">🔩 Steel Blue</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #5472d3; color: white;">#5472d3</div>
+                    <div class="color-swatch" style="background: #3f51b5; color: white;">#3f51b5</div>
+                    <div class="color-swatch" style="background: #e8eaf6; color: #333;">#e8eaf6</div>
+                </div>
+                <div class="palette-description">
+                    Strong industrial blue. Engineering precision with technological confidence.
+                </div>
+                <div class="color-codes">
+                    Primary: #5472d3<br>
+                    Secondary: #3f51b5<br>
+                    Light: #e8eaf6
+                </div>
+            </div>
+
+            <!-- Burgundy Wine -->
+            <div class="palette-card">
+                <div class="palette-name">🍷 Burgundy Wine</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #8e24aa; color: white;">#8e24aa</div>
+                    <div class="color-swatch" style="background: #6a1b9a; color: white;">#6a1b9a</div>
+                    <div class="color-swatch" style="background: #f3e5f5; color: #333;">#f3e5f5</div>
+                </div>
+                <div class="palette-description">
+                    Deep wine purple. Luxurious and distinguished with executive presence.
+                </div>
+                <div class="color-codes">
+                    Primary: #8e24aa<br>
+                    Secondary: #6a1b9a<br>
+                    Light: #f3e5f5
+                </div>
+            </div>
+
+            <!-- Dusty Rose -->
+            <div class="palette-card">
+                <div class="palette-name">🌸 Dusty Rose</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #bc5a94; color: white;">#bc5a94</div>
+                    <div class="color-swatch" style="background: #8e24aa; color: white;">#8e24aa</div>
+                    <div class="color-swatch" style="background: #fdf7fa; color: #333;">#fdf7fa</div>
+                </div>
+                <div class="palette-description">
+                    Muted pink-purple blend. Sophisticated and approachable with subtle elegance.
+                </div>
+                <div class="color-codes">
+                    Primary: #bc5a94<br>
+                    Secondary: #8e24aa<br>
+                    Light: #fdf7fa
+                </div>
+            </div>
+
+            <!-- Pine Forest -->
+            <div class="palette-card">
+                <div class="palette-name">🌲 Pine Forest</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #2e7d32; color: white;">#2e7d32</div>
+                    <div class="color-swatch" style="background: #1b5e20; color: white;">#1b5e20</div>
+                    <div class="color-swatch" style="background: #e8f5e8; color: #333;">#e8f5e8</div>
+                </div>
+                <div class="palette-description">
+                    Deep forest greens. Natural, grounded, and environmentally conscious.
+                </div>
+                <div class="color-codes">
+                    Primary: #2e7d32<br>
+                    Secondary: #1b5e20<br>
+                    Light: #e8f5e8
+                </div>
+            </div>
+
+            <!-- Terracotta -->
+            <div class="palette-card">
+                <div class="palette-name">🏺 Terracotta</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #d84315; color: white;">#d84315</div>
+                    <div class="color-swatch" style="background: #bf360c; color: white;">#bf360c</div>
+                    <div class="color-swatch" style="background: #fbe9e7; color: #333;">#fbe9e7</div>
+                </div>
+                <div class="palette-description">
+                    Earthy terracotta orange. Warm, creative, and artisanal with character.
+                </div>
+                <div class="color-codes">
+                    Primary: #d84315<br>
+                    Secondary: #bf360c<br>
+                    Light: #fbe9e7
+                </div>
+            </div>
+
+            <!-- Glacier Blue -->
+            <div class="palette-card">
+                <div class="palette-name">🏔️ Glacier Blue</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #0288d1; color: white;">#0288d1</div>
+                    <div class="color-swatch" style="background: #0277bd; color: white;">#0277bd</div>
+                    <div class="color-swatch" style="background: #e1f5fe; color: #333;">#e1f5fe</div>
+                </div>
+                <div class="palette-description">
+                    Cool glacier blue. Clean, fresh, and technologically advanced feeling.
+                </div>
+                <div class="color-codes">
+                    Primary: #0288d1<br>
+                    Secondary: #0277bd<br>
+                    Light: #e1f5fe
+                </div>
+            </div>
+
+            <!-- Espresso Brown -->
+            <div class="palette-card">
+                <div class="palette-name">☕ Espresso Brown</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #4e342e; color: white;">#4e342e</div>
+                    <div class="color-swatch" style="background: #3e2723; color: white;">#3e2723</div>
+                    <div class="color-swatch" style="background: #f6f2ef; color: #333;">#f6f2ef</div>
+                </div>
+                <div class="palette-description">
+                    Rich coffee browns. Warm, reliable, and sophisticated with comfort.
+                </div>
+                <div class="color-codes">
+                    Primary: #4e342e<br>
+                    Secondary: #3e2723<br>
+                    Light: #f6f2ef
+                </div>
+            </div>
+
+            <!-- Sunshine Gold -->
+            <div class="palette-card">
+                <div class="palette-name">☀️ Sunshine Gold</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #f57f17; color: white;">#f57f17</div>
+                    <div class="color-swatch" style="background: #e65100; color: white;">#e65100</div>
+                    <div class="color-swatch" style="background: #fffde7; color: #333;">#fffde7</div>
+                </div>
+                <div class="palette-description">
+                    Bright sunshine yellow with golden orange. Energetic, optimistic, and memorable.
+                </div>
+                <div class="color-codes">
+                    Primary: #f57f17<br>
+                    Secondary: #e65100<br>
+                    Light: #fffde7
+                </div>
+            </div>
+
+            <!-- Mustard & Navy -->
+            <div class="palette-card">
+                <div class="palette-name">🌾 Mustard & Navy</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #fbc02d; color: black;">#fbc02d</div>
+                    <div class="color-swatch" style="background: #1565c0; color: white;">#1565c0</div>
+                    <div class="color-swatch" style="background: #fffbf0; color: #333;">#fffbf0</div>
+                </div>
+                <div class="palette-description">
+                    Classic mustard yellow with navy blue. Sophisticated contrast with vintage appeal.
+                </div>
+                <div class="color-codes">
+                    Primary: #fbc02d<br>
+                    Secondary: #1565c0<br>
+                    Light: #fffbf0
+                </div>
+            </div>
+
+            <!-- Honey Amber -->
+            <div class="palette-card">
+                <div class="palette-name">🍯 Honey Amber</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #ffb300; color: black;">#ffb300</div>
+                    <div class="color-swatch" style="background: #ff8f00; color: white;">#ff8f00</div>
+                    <div class="color-swatch" style="background: #fff8e1; color: #333;">#fff8e1</div>
+                </div>
+                <div class="palette-description">
+                    Warm honey yellows with amber depth. Natural sweetness meets professional polish.
+                </div>
+                <div class="color-codes">
+                    Primary: #ffb300<br>
+                    Secondary: #ff8f00<br>
+                    Light: #fff8e1
+                </div>
+            </div>
+
+            <!-- Lemon & Charcoal -->
+            <div class="palette-card">
+                <div class="palette-name">🍋 Lemon & Charcoal</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #fdd835; color: black;">#fdd835</div>
+                    <div class="color-swatch" style="background: #424242; color: white;">#424242</div>
+                    <div class="color-swatch" style="background: #fffef7; color: #333;">#fffef7</div>
+                </div>
+                <div class="palette-description">
+                    Fresh lemon yellow with strong charcoal. High contrast and modern edge.
+                </div>
+                <div class="color-codes">
+                    Primary: #fdd835<br>
+                    Secondary: #424242<br>
+                    Light: #fffef7
+                </div>
+            </div>
+
+            <!-- Marigold Orange -->
+            <div class="palette-card">
+                <div class="palette-name">🌼 Marigold Orange</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #ffab00; color: black;">#ffab00</div>
+                    <div class="color-swatch" style="background: #ff6f00; color: white;">#ff6f00</div>
+                    <div class="color-swatch" style="background: #fff3e0; color: #333;">#fff3e0</div>
+                </div>
+                <div class="palette-description">
+                    Vibrant marigold yellow-orange. Creative energy with warm approachability.
+                </div>
+                <div class="color-codes">
+                    Primary: #ffab00<br>
+                    Secondary: #ff6f00<br>
+                    Light: #fff3e0
+                </div>
+            </div>
+
+            <!-- Butter & Sage -->
+            <div class="palette-card">
+                <div class="palette-name">🧈 Butter & Sage</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #f9a825; color: black;">#f9a825</div>
+                    <div class="color-swatch" style="background: #689f38; color: white;">#689f38</div>
+                    <div class="color-swatch" style="background: #fefcf3; color: #333;">#fefcf3</div>
+                </div>
+                <div class="palette-description">
+                    Soft butter yellow with sage green. Natural harmony and organic sophistication.
+                </div>
+                <div class="color-codes">
+                    Primary: #f9a825<br>
+                    Secondary: #689f38<br>
+                    Light: #fefcf3
+                </div>
+            </div>
+
+            <!-- Golden Hour -->
+            <div class="palette-card">
+                <div class="palette-name">🌅 Golden Hour</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #ffca28; color: black;">#ffca28</div>
+                    <div class="color-swatch" style="background: #ff8f00; color: white;">#ff8f00</div>
+                    <div class="color-swatch" style="background: #fffaf0; color: #333;">#fffaf0</div>
+                </div>
+                <div class="palette-description">
+                    Warm golden hour yellows. Inspiring and uplifting with sunset warmth.
+                </div>
+                <div class="color-codes">
+                    Primary: #ffca28<br>
+                    Secondary: #ff8f00<br>
+                    Light: #fffaf0
+                </div>
+            </div>
+
+            <!-- Canary & Slate -->
+            <div class="palette-card">
+                <div class="palette-name">🐤 Canary & Slate</div>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #ffeb3b; color: black;">#ffeb3b</div>
+                    <div class="color-swatch" style="background: #455a64; color: white;">#455a64</div>
+                    <div class="color-swatch" style="background: #fffde7; color: #333;">#fffde7</div>
+                </div>
+                <div class="palette-description">
+                    Bright canary yellow with cool slate. Playful yet professional balance.
+                </div>
+                <div class="color-codes">
+                    Primary: #ffeb3b<br>
+                    Secondary: #455a64<br>
+                    Light: #fffde7
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

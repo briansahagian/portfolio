@@ -28,6 +28,9 @@
                     <a href="#projects" class="nav-link">Projects</a>
                 </li>
                 <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
                     <a href="#skills" class="nav-link">Skills</a>
                 </li>
                 <li class="nav-item">
@@ -41,6 +44,13 @@
             </div>
         </div>
     </nav>
+
+    <!-- Floating Nav Indicator (appears when navbar is hidden on mobile) -->
+    <div class="nav-indicator" id="nav-indicator">
+        <button class="nav-indicator-btn" id="nav-indicator-btn" aria-label="Show navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -83,14 +93,14 @@
                     <h3>Engineering Through Hands-On Experience</h3>
                     <p>
                         I'm a student of the world who thrives on hands-on work. 
-                        Whether I'm programming Arduino controllers, machining parts on a CNC lathe, or rebuilding engines, 
+                        Whether I'm programming Arduino controllers, machining parts in BU's machine shop, or rebuilding 70's motorcycle engines, 
                         I love bringing theoretical concepts to life through practical application. My academic foundation 
                         in mechanical systems and materials science comes together best when I'm actually building something.
                     </p>
                     <p>
                         My primary interest lies in robotics and software-integrated systems—creating intelligent machines 
                         that can sense and respond to their environment. Outside of engineering, I'm passionate about 
-                        photography, skateboarding, snowboarding, surfing, bicycling, and motorcycle building. These diverse interests keep 
+                        photography, skateboarding, snowboarding, surfing, bicycling, and more. These diverse interests keep 
                         me creative and often inspire fresh approaches to engineering challenges.
                     </p>
                 </div>
@@ -119,6 +129,13 @@
 
             <!-- Projects Grid -->
             <div class="projects-grid" id="projects-grid">
+                <!-- Class Projects Section Break -->
+                <div class="project-section-break class" data-category="class">
+                    <div class="project-section-title">
+                        <i class="fas fa-graduation-cap"></i> Class Projects
+                    </div>
+                </div>
+
                 <!-- Class Project 1 -->
                 <div class="project-card" data-category="class">
                     <div class="project-image">
@@ -167,7 +184,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Monet Machine - Automated Painter</h3>
                         <p class="project-description">
-                            2.5 degree of freedom robotic system capable of automatically painting and drawing images on canvas using MATLAB G-code processing and Arduino control systems.
+                            2.5 degree of freedom robotic system capable of automatically painting and drawing images on canvas using MATLAB, G-code processing, and Arduino control systems.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">MATLAB</span>
@@ -276,6 +293,13 @@
                                 <i class="fas fa-external-link-alt"></i> See More
                             </a>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Machine Shop Section Break -->
+                <div class="project-section-break machine-shop" data-category="machine-shop">
+                    <div class="project-section-title">
+                        <i class="fas fa-tools"></i> Machine Shop Projects
                     </div>
                 </div>
 
@@ -407,6 +431,13 @@
                     </div>
                 </div>
 
+                <!-- Personal Projects Section Break -->
+                <div class="project-section-break personal" data-category="personal">
+                    <div class="project-section-title">
+                        <i class="fas fa-heart"></i> Personal Projects
+                    </div>
+                </div>
+
                 <!-- Personal Project 1 -->
                 <div class="project-card" data-category="personal">
                     <div class="project-image">
@@ -499,6 +530,109 @@
                             <a href="projects/detailed/jeep-maintenance.html" class="see-more-btn">
                                 <i class="fas fa-external-link-alt"></i> See More
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-subtitle">Professional experience and key contributions</p>
+            </div>
+            <div class="experience-timeline">
+                <!-- Job 1 -->
+                <div class="experience-item">
+                    <div class="experience-icon">
+                        <img src="assets/images/company-logos/jbb.jpeg" alt="Jaros Baum & Bolles Logo" class="timeline-company-logo">
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div class="job-header-main">
+                                <h3 class="job-title">HVAC Engineering Intern</h3>
+                                <span class="company">Jaros Baum & Bolles</span>
+                                <span class="duration">Summer 2025</span>
+                            </div>
+                        </div>
+                        <div class="job-description">
+                            <p>Supported team of HVAC Engineers outfitting new and renovated buildings with to-code HVAC equipment. Worked on high-profile projects including Northeast corridor such as offices, data centers, and laboratories.</p>
+                            <ul class="achievements">
+                                <li>Performed heating and cooling load calculations using Trane TRACE software and sized HVAC equipment accordingly</li>
+                                <li>Reviewed equipment submittals and checked code requirements (ASHRAE, SMACNA) to accept/deny contractor proposals</li>
+                                <li>Drafted and revised HVAC systems in Revit, maintaining company and industry standards</li>
+                                <li>Completed thermal comfort study for Bain Capital's John Hancock Tower (200 Clarendon St) renovation in Boston</li>
+                                <li>Designed HVAC systems for CV Properties 200 Dyer Street Apartment building in Providence, RI</li>
+                            </ul>
+                        </div>
+                        <div class="job-photos">
+                            <div class="photo-gallery">
+                                <img src="assets/images/work-experience/jbb/hancocktower.jpg" alt="John Hancock Tower Project" class="work-photo" data-lightbox="true">
+                                <img src="assets/images/work-experience/jbb/IMG_1172.jpg" alt="JBB Project Work" class="work-photo" data-lightbox="true">
+                                <img src="assets/images/work-experience/jbb/IMG_1628.jpg" alt="JBB Engineering Work" class="work-photo" data-lightbox="true">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="experience-item">
+                    <div class="experience-icon">
+                        <img src="assets/images/company-logos/epic.png" alt="Boston University EPIC Logo" class="timeline-company-logo">
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div class="job-header-main">
+                                <h3 class="job-title">Machine Shop Student Advisor</h3>
+                                <span class="company">Boston University Engineering Product Innovation Center</span>
+                                <span class="duration">Fall 2024 - Present</span>
+                            </div>
+                        </div>
+                        <div class="job-description">
+                            <p>Oversee BU's Machine Shop floor and product design center, supervising students and maintaining advanced manufacturing equipment. BU SciShield Lab Safety certified.</p>
+                            <ul class="achievements">
+                                <li>Supervise machine shop operations and teach students proper use of Haas CNC Mills, Proto-Trak CNC Lathes, and Bridgeport Manual Mills</li>
+                                <li>Optimize engineering project designs with machining-conscious and efficiency-driven decisions</li>
+                                <li>Enforce strict safety protocols and perform routine maintenance on manufacturing equipment</li>
+                                <li>Manage advanced equipment including Bambu 3D printers, FormLabs resin printers, ProtoMAX Waterjet, and Epilog Laser Cutter</li>
+                                <li>Personally responsible for upkeep of adopted horizontal bandsaw through Adopt-A-Tool program</li>
+                            </ul>
+                        </div>
+                        <div class="job-photos">
+                            <div class="photo-gallery">
+                                <img src="assets/images/work-experience/epic/IMG_0280 (1).JPG" alt="EPIC Machine Shop" class="work-photo" data-lightbox="true">
+                                <img src="assets/images/work-experience/epic/IMG_6738.jpg" alt="EPIC Equipment" class="work-photo" data-lightbox="true">
+                                <img src="assets/images/work-experience/epic/IMG_6739.jpg" alt="EPIC Workshop" class="work-photo" data-lightbox="true">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="experience-item">
+                    <div class="experience-icon">
+                        <img src="assets/images/company-logos/rypos.png" alt="Rypos Inc. Logo" class="timeline-company-logo">
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div class="job-header-main">
+                                <h3 class="job-title">Research and Design Mechanical Engineering Intern</h3>
+                                <span class="company">Rypos Inc.</span>
+                                <span class="duration">Summer 2022</span>
+                            </div>
+                        </div>
+                        <div class="job-description">
+                            <p>Optimized Rypos' Diesel Automotive Particulate filter design through materials research and testing. Developed lab safety protocols and presented findings to engineering team.</p>
+                            <ul class="achievements">
+                                <li>Tested and selected new concrete-based alternatives for filter adhesive materials</li>
+                                <li>Conducted analysis and strength testing of automotive particulate filter components</li>
+                                <li>Developed lab safety, precision, and data accumulation skills in industrial research environment</li>
+                                <li>Presented weekly progress updates to Rypos' team of engineers, demonstrating public speaking skills</li>
+                                <li>Contributed to optimization of diesel automotive particulate filter housing design</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -687,6 +821,69 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Photo Gallery Modal Functions (copied from project-detail.js)
+        document.addEventListener('DOMContentLoaded', function() {
+            initWorkPhotoGallery();
+        });
+
+        function initWorkPhotoGallery() {
+            const workPhotos = document.querySelectorAll('.work-photo');
+            
+            if (workPhotos.length === 0) return;
+            
+            // Create modal element
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.id = 'imageModal';
+            
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <img class="modal-image" id="modalImage" src="" alt="">
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            const modalImage = document.getElementById('modalImage');
+            const closeBtn = modal.querySelector('.modal-close');
+            
+            // Add click handlers to work photos
+            workPhotos.forEach(photo => {
+                photo.addEventListener('click', function() {
+                    modalImage.src = this.src;
+                    modalImage.alt = this.alt;
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            // Close modal handlers
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+            
+            // Close with escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
 
     <script src="assets/js/script.js"></script>
 </body>

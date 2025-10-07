@@ -1,7 +1,15 @@
+// Immediate execution to verify script is loading
+console.log('script.js file loaded successfully!');
+
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM Content Loaded - script.js executing'); // Debug log
+    
     // Navigation functionality
     initNavigation();
+    
+    // Dynamic navbar height adjustment
+    initDynamicNavbarPadding();
     
     // Project filtering
     initProjectFiltering();
@@ -17,34 +25,134 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Navbar scroll effect
     initNavbarScrollEffect();
+    
+    // Initialize lightbox
+    initLightbox();
+    
+    console.log('All initialization functions called'); // Debug log
 });
+
+// Initialize Lightbox Event Listeners
+function initLightbox() {
+    console.log('Initializing lightbox...'); // Debug log
+    
+    // Add click event listeners to all work photos
+    const workPhotos = document.querySelectorAll('.work-photo[data-lightbox="true"]');
+    console.log('Found', workPhotos.length, 'work photos with data-lightbox="true"'); // Debug log
+    
+    // Also try finding all work photos regardless of data attribute
+    const allWorkPhotos = document.querySelectorAll('.work-photo');
+    console.log('Found', allWorkPhotos.length, 'total work photos'); // Debug log
+    
+    if (workPhotos.length === 0) {
+        console.warn('No work photos found with data-lightbox attribute!');
+        console.log('Trying to add listeners to all work photos instead...');
+        
+        allWorkPhotos.forEach((photo, index) => {
+            console.log('Adding listener to photo', index, ':', photo.src);
+            photo.addEventListener('click', function() {
+                console.log('Photo clicked (fallback):', this.src, this.alt);
+                openLightbox(this.src, this.alt);
+            });
+        });
+    } else {
+        workPhotos.forEach((photo, index) => {
+            console.log('Adding listener to photo', index, ':', photo.src);
+            photo.addEventListener('click', function() {
+                console.log('Photo clicked:', this.src, this.alt);
+                openLightbox(this.src, this.alt);
+            });
+        });
+    }
+}
+
+// Global Lightbox Functions (available immediately)
+function openLightbox(src, alt) {
+    console.log('openLightbox called with:', src, alt); // Debug log
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    
+    console.log('lightbox element:', lightbox); // Debug log
+    console.log('lightboxImage element:', lightboxImage); // Debug log
+    
+    if (lightbox && lightboxImage) {
+        lightboxImage.src = src;
+        lightboxImage.alt = alt;
+        lightbox.classList.add('active');
+        
+        // Prevent body scrolling when lightbox is open
+        document.body.style.overflow = 'hidden';
+        console.log('Lightbox opened successfully'); // Debug log
+    } else {
+        console.error('Lightbox elements not found'); // Debug log
+    }
+}
+
+function closeLightbox() {
+    console.log('closeLightbox called'); // Debug log
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.classList.remove('active');
+        
+        // Restore body scrolling
+        document.body.style.overflow = 'auto';
+        console.log('Lightbox closed successfully'); // Debug log
+    }
+}
 
 // Navigation Functions
 function initNavigation() {
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    // Navigation is now permanently visible on all screen sizes
+    // No toggle functionality needed for mobile-first approach
+    console.log('Navigation initialized - permanently visible');
+}
+
+// Dynamic Navbar Height Adjustment
+function initDynamicNavbarPadding() {
+    function updateScrollPadding() {
+        const navbar = document.getElementById('navbar');
+        if (navbar) {
+            const navbarHeight = navbar.offsetHeight;
+            const extraPadding = 20; // Add some extra padding for visual comfort
+            const totalPadding = navbarHeight + extraPadding;
+            
+            // Update the scroll-padding-top for smooth scrolling
+            document.documentElement.style.scrollPaddingTop = totalPadding + 'px';
+            
+            // Also update the hero section padding to prevent initial overlap
+            const heroSection = document.querySelector('.hero');
+            if (heroSection) {
+                heroSection.style.paddingTop = totalPadding + 'px';
+            }
+            
+            console.log(`Updated scroll padding to ${totalPadding}px (navbar: ${navbarHeight}px + ${extraPadding}px extra)`);
+        }
+    }
     
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
-        
-        // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
+    // Update padding on load
+    updateScrollPadding();
+    
+    // Update padding on window resize (in case navbar height changes)
+    window.addEventListener('resize', updateScrollPadding);
+    
+    // Update padding after fonts load (in case text affects navbar height)
+    document.fonts.ready.then(updateScrollPadding);
+    
+    // Also update when navbar visibility changes
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    // Small delay to ensure transition is complete
+                    setTimeout(updateScrollPadding, 50);
+                }
             });
         });
         
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            }
+        observer.observe(navbar, {
+            attributes: true,
+            attributeFilter: ['class']
         });
     }
 }
@@ -53,6 +161,7 @@ function initNavigation() {
 function initProjectFiltering() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
+    const sectionBreaks = document.querySelectorAll('.project-section-break');
     
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -74,6 +183,17 @@ function initProjectFiltering() {
                 } else {
                     card.classList.add('hidden');
                     card.style.display = 'none';
+                }
+            });
+            
+            // Handle section breaks based on active filter
+            sectionBreaks.forEach(sectionBreak => {
+                const sectionCategory = sectionBreak.getAttribute('data-category');
+                
+                if (filter === 'all' || filter === sectionCategory) {
+                    sectionBreak.style.display = '';
+                } else {
+                    sectionBreak.style.display = 'none';
                 }
             });
         });
@@ -155,23 +275,34 @@ function initContactForm() {
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
             
-            // Send email using EmailJS
+            // Send email using EmailJS with proper template parameters
             const templateParams = {
                 from_name: name,
                 from_email: email,
                 subject: subject,
-                message: message,
-                to_email: 'briansahagian@gmail.com'
+                message: message
             };
             
-            emailjs.send('service_0d23sae', 'template_dgbyyzt', templateParams)
+            console.log('Sending email with params:', templateParams);
+            
+            emailjs.send('service_0d23sae', 'template_bolx0oo', templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
                     contactForm.reset();
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    showNotification('Failed to send message. Please try again or contact me directly.', 'error');
+                })
+                .catch(function(error) {
+                    console.error('EmailJS Error:', error);
+                    // More detailed error message
+                    let errorMsg = 'Failed to send message. ';
+                    if (error.text) {
+                        errorMsg += 'Error: ' + error.text;
+                    } else if (error.status) {
+                        errorMsg += 'Status: ' + error.status;
+                    } else {
+                        errorMsg += 'Please check your internet connection and try again.';
+                    }
+                    showNotification(errorMsg, 'error');
                 })
                 .finally(function() {
                     submitButton.textContent = originalText;
@@ -268,8 +399,8 @@ function showNotification(message, type) {
 function initScrollAnimations() {
     // Add intersection observer for fade-in animations
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.01, // Reduced from 0.05 to trigger even earlier
+        rootMargin: '150px 0px 0px 0px' // Increased from 50px to 150px - trigger much earlier
     };
     
     const observer = new IntersectionObserver(function(entries) {
@@ -287,11 +418,11 @@ function initScrollAnimations() {
         observer.observe(section);
     });
     
-    // Observe project cards
+    // Observe project cards with faster animations
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
         card.classList.add('fade-in');
-        card.style.transitionDelay = `${index * 0.1}s`;
+        card.style.transitionDelay = `${index * 0.04}s`; // Reduced from 0.07s to 0.04s for faster appearance
         observer.observe(card);
     });
     
@@ -299,7 +430,7 @@ function initScrollAnimations() {
     const skillItems = document.querySelectorAll('.skill-item');
     skillItems.forEach((item, index) => {
         item.classList.add('fade-in');
-        item.style.transitionDelay = `${index * 0.05}s`;
+        item.style.transitionDelay = `${index * 0.02}s`; // Reduced from 0.04s to 0.02s for faster appearance
         observer.observe(item);
     });
 }
@@ -307,16 +438,80 @@ function initScrollAnimations() {
 // Navbar Scroll Effect
 function initNavbarScrollEffect() {
     const navbar = document.getElementById('navbar');
+    const navIndicator = document.getElementById('nav-indicator');
+    const navIndicatorBtn = document.getElementById('nav-indicator-btn');
+    let lastScrollY = 0;
+    let ticking = false;
     
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
+    // Handle nav indicator click
+    if (navIndicatorBtn) {
+        navIndicatorBtn.addEventListener('click', function() {
+            // Show navbar
+            navbar.classList.remove('navbar-hidden');
+            // Hide indicator
+            navIndicator.classList.remove('visible');
+        });
+    }
+    
+    function updateNavbar() {
+        const currentScrollY = window.scrollY;
+        const scrollingDown = currentScrollY > lastScrollY;
+        const scrollingUp = currentScrollY < lastScrollY;
+        
+        // Standard scrolled effect (background change)
+        if (currentScrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
         
+        // Mobile scroll direction behavior
+        if (window.innerWidth <= 768) {
+            if (scrollingDown && currentScrollY > 100) {
+                // Scrolling down - hide navbar, show indicator
+                navbar.classList.add('navbar-hidden');
+                if (navIndicator) {
+                    navIndicator.classList.add('visible');
+                }
+            } else if (scrollingUp || currentScrollY <= 100) {
+                // Scrolling up or near top - show navbar, hide indicator
+                navbar.classList.remove('navbar-hidden');
+                if (navIndicator) {
+                    navIndicator.classList.remove('visible');
+                }
+            }
+        } else {
+            // Desktop - always show navbar, hide indicator
+            navbar.classList.remove('navbar-hidden');
+            if (navIndicator) {
+                navIndicator.classList.remove('visible');
+            }
+        }
+        
+        lastScrollY = currentScrollY;
+        ticking = false;
+        
         // Update active nav link based on scroll position
         updateActiveNavOnScroll();
+    }
+    
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateNavbar);
+            ticking = true;
+        }
+    }
+    
+    window.addEventListener('scroll', requestTick);
+    
+    // Also check on resize in case screen size changes
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            navbar.classList.remove('navbar-hidden');
+            if (navIndicator) {
+                navIndicator.classList.remove('visible');
+            }
+        }
     });
 }
 
@@ -499,6 +694,27 @@ function initLazyLoading() {
     
     images.forEach(img => imageObserver.observe(img));
 }
+
+// Close lightbox when clicking outside the image
+document.addEventListener('click', function(e) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.querySelector('.lightbox-content');
+    
+    if (lightbox && lightbox.classList.contains('active') && 
+        lightboxContent && !lightboxContent.contains(e.target)) {
+        closeLightbox();
+    }
+});
+
+// Close lightbox with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const lightbox = document.getElementById('lightbox');
+        if (lightbox && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    }
+});
 
 // Call lazy loading when DOM is ready
 document.addEventListener('DOMContentLoaded', initLazyLoading);

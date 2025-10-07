@@ -1,5 +1,21 @@
 /* Project Detail Page Styles */
 
+/* Touch-friendly enhancements */
+.gallery-img, .btn, .nav-link, .skill-tag {
+    /* Ensure minimum touch target size */
+    min-height: 44px;
+    /* Improve touch response */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    touch-action: manipulation;
+}
+
+/* Prevent horizontal overflow on all project pages */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
 /* Hero Image Section - First Element */
 .project-hero-image-section {
     padding: 80px 0 20px;
@@ -34,7 +50,7 @@
 }
 
 .project-breadcrumb a {
-    color: #667eea;
+    color: #d84315;
     text-decoration: none;
 }
 
@@ -71,7 +87,7 @@
 }
 
 .meta-item i {
-    color: #667eea;
+    color: #d84315;
 }
 
 .project-hero-image {
@@ -172,7 +188,7 @@
 .step-number {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #d84315 0%, #bf360c 100%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -241,7 +257,7 @@
 .skills-tags .skill-tag:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    border-color: #667eea;
+    border-color: #d84315;
 }
 
 /* Project Navigation Improvements */
@@ -360,7 +376,7 @@
 
 .contribution-item i {
     font-size: 2.5rem;
-    color: #667eea;
+    color: #d84315;
     margin-bottom: 1.5rem;
 }
 
@@ -413,12 +429,12 @@
 
 .gallery-placeholder {
     grid-column: 1 / -1;
-    background: #f0f3ff;
-    border: 2px dashed #667eea;
+    background: #fbe9e7;
+    border: 2px dashed #d84315;
     border-radius: 15px;
     padding: 4rem 2rem;
     text-align: center;
-    color: #667eea;
+    color: #d84315;
 }
 
 .gallery-placeholder i {
@@ -456,8 +472,8 @@
 }
 
 .skill-tag {
-    background: #f0f3ff;
-    color: #667eea;
+    background: #fbe9e7;
+    color: #d84315;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -466,7 +482,7 @@
 }
 
 .skill-tag:hover {
-    background: #667eea;
+    background: #d84315;
     color: white;
     transform: translateY(-2px);
 }
@@ -649,8 +665,8 @@
 }
 
 .skill-tag {
-    background: #f0f3ff;
-    color: #667eea;
+    background: #fbe9e7;
+    color: #d84315;
     padding: 12px 24px;
     border-radius: 25px;
     font-size: 0.9rem;
@@ -660,10 +676,10 @@
 }
 
 .skill-tag:hover {
-    background: #667eea;
+    background: #d84315;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
 }
 
 /* Video Section Styles */
@@ -778,5 +794,526 @@
     .project-meta {
         flex-direction: column;
         gap: 0.5rem;
+    }
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    position: relative;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    background: #f8f9fa;
+}
+
+.slide-content {
+    padding: 30px;
+    background: #ffffff;
+}
+
+.slide-content h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.slide-content p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.slide-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 10;
+}
+
+.slide-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.slide-indicators {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.indicator.active,
+.indicator:hover {
+    background: #d84315;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Mobile responsive for slideshow */
+@media (max-width: 768px) {
+    .slide img {
+        height: 250px;
+    }
+    
+    .slide-content {
+        padding: 20px;
+    }
+    
+    .slide-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .slide-nav {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+}
+
+/* Video Gallery Styles */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.video-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-item iframe {
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item iframe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile responsive for videos */
+@media (max-width: 768px) {
+    .video-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .video-item iframe {
+        width: 280px;
+        height: 498px;
+    }
+}
+
+/* Parts List Styles */
+.parts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.part-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #d84315;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.part-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.part-item strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Mobile responsive for parts list */
+@media (max-width: 768px) {
+    .parts-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .part-item {
+        padding: 12px;
+    }
+}
+
+/* Enhanced Mobile Responsiveness for Project Details */
+@media (max-width: 768px) {
+    /* Strict overflow prevention */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+    .container {
+        padding: 0 15px;
+        width: 100%;
+        max-width: calc(100vw - 30px);
+        box-sizing: border-box;
+    }
+    
+    /* Ensure all sections fit within viewport */
+    section, .project-section {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .project-hero-image-section {
+        padding: 60px 0 15px;
+        margin-top: 60px;
+        width: 100%;
+    }
+
+    .project-hero {
+        padding: 20px 0 40px;
+        width: 100%;
+    }
+
+    .project-title {
+        font-size: 2rem;
+        line-height: 1.3;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .project-subtitle {
+        font-size: 16px;
+        line-height: 1.5;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .project-meta {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .meta-item {
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+
+    .project-section {
+        padding: 30px 0 !important;
+        width: 100%;
+    }
+
+    .project-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+    }
+
+    .gallery-description {
+        font-size: 16px;
+        margin-bottom: 20px;
+        word-wrap: break-word;
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .gallery-img {
+        height: 250px;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .skills-tags {
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .skill-tag {
+        padding: 8px 12px;
+        font-size: 13px;
+        max-width: calc(50% - 4px);
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .project-navigation {
+        padding: 30px 0;
+        width: 100%;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        padding: 12px 20px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .video-item iframe {
+        width: 100%;
+        max-width: 320px;
+        height: 180px;
+    }
+
+    .slideshow-embed iframe {
+        height: 400px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Ensure video gallery doesn't overflow */
+    .video-gallery {
+        width: 100%;
+        max-width: 100%;
+        justify-items: center;
+    }
+    
+    /* Parts list mobile fixes */
+    .parts-grid {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .part-item {
+        width: 100%;
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ultra-strict mobile overflow prevention */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+    .container {
+        padding: 0 15px;
+        width: 100%;
+        max-width: calc(100vw - 30px);
+        box-sizing: border-box;
+    }
+    
+    /* Ensure everything fits on small screens */
+    * {
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .project-hero-image-section {
+        padding: 50px 0 10px;
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .project-hero {
+        padding: 15px 0 30px;
+        width: 100%;
+    }
+
+    .project-title {
+        font-size: 1.6rem;
+        line-height: 1.3;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .project-subtitle {
+        font-size: 14px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .project-breadcrumb {
+        font-size: 13px;
+        word-wrap: break-word;
+    }
+
+    .meta-item {
+        font-size: 13px;
+        word-wrap: break-word;
+    }
+
+    .project-section {
+        padding: 20px 0 !important;
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .project-section h2 {
+        font-size: 1.5rem;
+        word-wrap: break-word;
+    }
+
+    .gallery-description {
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+
+    .gallery-img {
+        height: 220px;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .skill-tag {
+        padding: 6px 10px;
+        font-size: 12px;
+        max-width: calc(100% - 8px);
+        margin: 2px;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .nav-buttons .btn {
+        padding: 10px 16px;
+        font-size: 13px;
+        width: 100%;
+        max-width: calc(100vw - 60px);
+        box-sizing: border-box;
+    }
+
+    .video-item iframe {
+        width: 100%;
+        max-width: calc(100vw - 40px);
+        height: 160px;
+    }
+
+    .slideshow-embed iframe {
+        height: 300px;
+        width: 100%;
+        max-width: calc(100vw - 30px);
+    }
+
+    .part-item {
+        padding: 10px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+    
+    /* Ensure hero image doesn't overflow */
+    .hero-img {
+        width: 100%;
+        max-width: calc(100vw - 30px);
+        height: auto;
+    }
+    
+    /* Prevent any grid from overflowing */
+    .photo-gallery,
+    .video-gallery,
+    .parts-grid,
+    .skills-tags {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .project-title {
+        font-size: 1.4rem;
+    }
+
+    .project-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .gallery-img {
+        height: 200px;
+    }
+
+    .video-item iframe {
+        max-width: 260px;
+        height: 150px;
+    }
+
+    .slideshow-embed iframe {
+        height: 250px;
     }
 }
