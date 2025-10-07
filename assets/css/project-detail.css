@@ -2,24 +2,25 @@
 
 /* Hero Image Section - First Element */
 .project-hero-image-section {
-    padding: 80px 0 40px;
+    padding: 80px 0 20px;
     margin-top: 70px;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .project-hero-image-section .hero-img {
     width: 100%;
-    max-width: 1000px;
+    max-width: 600px;
     height: auto;
+    object-fit: contain;
     border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     margin: 0 auto;
     display: block;
 }
 
 .project-hero {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 40px 0 80px;
+    padding: 30px 0 60px;
 }
 
 .project-hero-content {
@@ -81,7 +82,8 @@
 }
 
 .hero-img {
-    max-width: 100%;
+    max-width: 600px;
+    width: 100%;
     height: auto;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -191,6 +193,151 @@
     line-height: 1.6;
 }
 
+/* Video Grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-items: center;
+}
+
+.video-item {
+    max-width: 800px;
+    width: 100%;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Tags Simple Layout */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-tags .skill-tag {
+    background: white;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.skills-tags .skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+/* Project Navigation Improvements */
+.project-navigation {
+    padding: 2rem 0;
+    background: #f8f9fa;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.nav-buttons .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    min-width: 140px;
+}
+
+/* Footer improvements */
+.footer .social-links a {
+    color: #ffffff !important;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.footer .social-links a:hover {
+    color: #4a90e2 !important;
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* Modal fix for dimming issue */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.modal-close {
+    position: absolute;
+    top: -50px;
+    right: -20px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
 /* Contributions */
 .contributions-grid {
     display: grid;
@@ -242,21 +389,26 @@
 }
 
 .gallery-item {
-    aspect-ratio: 4/3;
     overflow: hidden;
     border-radius: 15px;
     cursor: pointer;
     transition: transform 0.3s ease;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    min-height: 200px;
+    object-fit: contain;
+    background: #f8f9fa;
+    display: block;
 }
 
 .gallery-placeholder {

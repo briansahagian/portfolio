@@ -67,18 +67,13 @@ function initProjectFiltering() {
                 const category = card.getAttribute('data-category');
                 
                 if (filter === 'all' || category === filter) {
-                    card.style.display = 'block';
-                    // Add fade-in animation
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'scale(1)';
-                    }, 100);
+                    card.classList.remove('hidden');
+                    card.style.display = '';
+                    card.style.opacity = '';
+                    card.style.transform = '';
                 } else {
-                    card.style.opacity = '0';
-                    card.style.transform = 'scale(0.8)';
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                    }, 300);
+                    card.classList.add('hidden');
+                    card.style.display = 'none';
                 }
             });
         });
@@ -126,6 +121,9 @@ function updateActiveNavLink(targetId) {
 
 // Contact Form
 function initContactForm() {
+    // Initialize EmailJS
+    emailjs.init("1EKSBATuQW3NbT3hr");
+    
     const contactForm = document.getElementById('contact-form');
     
     if (contactForm) {
@@ -150,19 +148,35 @@ function initContactForm() {
                 return;
             }
             
-            // Simulate form submission
+            // Get submit button
             const submitButton = this.querySelector('button[type="submit"]');
             const originalText = submitButton.textContent;
             
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
             
-            setTimeout(() => {
-                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-                contactForm.reset();
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            }, 1500);
+            // Send email using EmailJS
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                subject: subject,
+                message: message,
+                to_email: 'briansahagian@gmail.com'
+            };
+            
+            emailjs.send('service_0d23sae', 'template_dgbyyzt', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                    contactForm.reset();
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    showNotification('Failed to send message. Please try again or contact me directly.', 'error');
+                })
+                .finally(function() {
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                });
         });
     }
 }

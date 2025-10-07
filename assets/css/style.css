@@ -592,20 +592,32 @@ section {
 }
 
 .project-link {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333;
+    color: #667eea;
     text-decoration: none;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .project-link:hover {
     transform: scale(1.1);
+    background: #667eea;
+    color: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-link i {
+    font-size: 1.2rem;
+}
+
+.project-link span {
+    display: none;
 }
 
 .project-content {
@@ -695,18 +707,22 @@ section {
 .skills-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
+    align-items: stretch;
 }
 
 .skill-item {
     background: white;
-    padding: 1.5rem;
+    padding: 1.25rem;
     border-radius: 10px;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 1rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
+    height: 70px;
+    width: 100%;
 }
 
 .skill-item:hover {
@@ -716,11 +732,21 @@ section {
 .skill-item i {
     font-size: 1.5rem;
     color: #667eea;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .skill-item span {
     font-weight: 500;
     color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
 }
 
 /* Contact Section */
@@ -795,6 +821,8 @@ section {
     border: 2px solid #e0e6ed;
     border-radius: 8px;
     font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     transition: border-color 0.3s ease;
     background: white;
 }
