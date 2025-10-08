@@ -1421,6 +1421,14 @@ section {
         width: 100%;
     }
 
+    .engine-photo {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
     /* Contact section mobile fixes */
     .contact-content {
         grid-template-columns: 1fr;
