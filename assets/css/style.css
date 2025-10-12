@@ -302,12 +302,12 @@ p {
 }
 
 .hero-photo {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
     object-position: 70% 30%;
     border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(216, 67, 21, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     border: 5px solid white;
 }
 
@@ -1258,6 +1258,19 @@ section {
     margin: 0;
 }
 
+/* Resume download link styling */
+.contact-method a[download] {
+    color: #d84315;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s ease;
+}
+
+.contact-method a[download]:hover {
+    border-bottom-color: #d84315;
+}
+
 .contact-form {
     background: #f8f9fa;
     padding: 2rem;
@@ -1407,6 +1420,11 @@ section {
         justify-content: center;
         flex-wrap: wrap;
         width: 100%;
+    }
+
+    .hero-photo {
+        width: 300px;
+        height: 300px;
     }
 
     /* About section mobile fixes */
