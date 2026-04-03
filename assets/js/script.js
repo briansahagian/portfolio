@@ -552,58 +552,7 @@ function debounce(func, wait) {
     };
 }
 
-// Typing Effect for Hero Section
-function initTypingEffect() {
-    const texts = [
-        'Engineering Student',
-        'Problem Solver',
-        'Innovation Enthusiast',
-        'Tech Explorer'
-    ];
-    
-    const heroSubtitle = document.querySelector('.hero-subtitle');
-    if (!heroSubtitle) return;
-    
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let currentText = '';
-    
-    function typeEffect() {
-        const fullText = texts[textIndex];
-        
-        if (isDeleting) {
-            currentText = fullText.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            currentText = fullText.substring(0, charIndex + 1);
-            charIndex++;
-        }
-        
-        heroSubtitle.textContent = currentText;
-        
-        let typeSpeed = isDeleting ? 100 : 150;
-        
-        if (!isDeleting && charIndex === fullText.length) {
-            typeSpeed = 2000; // Pause at end
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            textIndex = (textIndex + 1) % texts.length;
-            typeSpeed = 500; // Pause before next word
-        }
-        
-        setTimeout(typeEffect, typeSpeed);
-    }
-    
-    // Start typing effect after page loads
-    setTimeout(typeEffect, 1000);
-}
-
-// Initialize typing effect when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(initTypingEffect, 500);
-});
+// Typing effect removed - static hero subtitle is now displayed
 
 // Particle Background Effect (Optional)
 function initParticleBackground() {
