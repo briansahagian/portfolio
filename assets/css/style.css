@@ -1497,6 +1497,10 @@ section {
         margin: 1rem 0;
     }
 
+    .projects-grid .project-card.centered-lone {
+        width: 100%;
+    }
+
     /* Project section breaks mobile fixes */
     .project-section-break::before {
         right: calc(50% + 100px);
