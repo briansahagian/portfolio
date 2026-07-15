@@ -396,9 +396,9 @@ p {
 }
 
 .showcase-description {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #555;
-    max-width: 1000px;
+    max-width: 720px;
     margin: 2.5rem auto 0 !important;
     line-height: 1.7;
     text-align: center;
@@ -629,7 +629,7 @@ section {
 
 .project-image {
     position: relative;
-    height: 290px;
+    height: 220px;
     overflow: hidden;
 }
 
