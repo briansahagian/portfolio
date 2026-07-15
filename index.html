@@ -37,9 +37,6 @@
                     <a href="#experience" class="nav-link">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
                     <a href="#beyond-engineering" class="nav-link">Beyond Engineering</a>
                 </li>
                 <li class="nav-item">
@@ -70,9 +67,8 @@
                 </h1>
                 <h2 class="hero-subtitle">Mechanical Engineering @<br>Boston University</h2>
                 <p class="hero-description">
-                    I'm a senior Mechanical Engineering student excited by hands-on prototyping, robotic systems, and hardware-software integration.  
-                    With a strong foundation in design and manufacturing, I build efficient mechanical systems enhanced by smart programming that drive to solve real-world problems. 
-                    Welcome to my portfolio showcasing my skills and projects.
+                    I'm a recent graduate in Mechanical Engineering excited by hands-on prototyping, robotic systems, and hardware-software integration.  
+                    With a strong foundation in design and manufacturing, I build electromechanical systems that drive to solve real-world problems.
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -95,28 +91,12 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">My Projects</h2>
-                <p class="section-subtitle">A collection of my engineering projects and achievements</p>
-            </div>
-            
-            <!-- Project Filter -->
-            <div class="project-filter">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="class">Class Projects</button>
-                <button class="filter-btn" data-filter="machine-shop">Machine Shop</button>
-                <button class="filter-btn" data-filter="personal">Personal Projects</button>
             </div>
 
             <!-- Projects Grid -->
             <div class="projects-grid" id="projects-grid">
-                <!-- Class Projects Section Break -->
-                <div class="project-section-break class" data-category="class">
-                    <div class="project-section-title">
-                        <i class="fas fa-graduation-cap"></i> Class Projects
-                    </div>
-                </div>
-
                 <!-- Class Project 1 - Buoy -->
-                <div class="project-card" data-category="class">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/images/class-projects/buoy/IMG_2702.JPG" alt="Water Quality Monitoring Buoy" class="project-img">
                         <div class="project-overlay">
@@ -129,16 +109,10 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Water Quality Monitoring Buoy</h3>
+                        <h3 class="project-title"><i>E. coli</i> & Cyanobacteria Monitoring Buoy</h3>
                         <p class="project-description">
                             Senior thesis — a sensor-equipped mooring buoy that continuously monitors water quality and predicts cyanobacteria and E. coli levels. Led full mechanical design including CAD, thermoforming, CNC machining, and waterproofing.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">SolidWorks CAD</span>
-                            <span class="tech-tag">Thermoforming</span>
-                            <span class="tech-tag">CNC Milling</span>
-                            <span class="tech-tag">System Integration</span>
-                        </div>
                         <div class="project-actions">
                             <a href="projects/detailed/water-quality-buoy.html" class="see-more-btn">
                                 <i class="fas fa-external-link-alt"></i> See More
@@ -148,7 +122,7 @@
                 </div>
 
                 <!-- Class Project 2 -->
-                <div class="project-card" data-category="class">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/images/class-projects/rod-balancing-car/image99.jpg" alt="PID Controlled Transport Cart" class="project-img">
                         <div class="project-overlay">
@@ -165,12 +139,6 @@
                         <p class="project-description">
                             Autonomous cart using a PID control algorithm implemented in Arduino to transport a vertical aluminum rod at maximum speed while maintaining stability, validated with SolidWorks motion analysis.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">PID Control</span>
-                            <span class="tech-tag">Arduino</span>
-                            <span class="tech-tag">SolidWorks Motion</span>
-                            <span class="tech-tag">Motor Control</span>
-                        </div>
                         <div class="project-actions">
                             <a href="projects/detailed/motor-control-cart.html" class="see-more-btn">
                                 <i class="fas fa-external-link-alt"></i> See More
@@ -180,9 +148,9 @@
                 </div>
 
                 <!-- Class Project 2 -->
-                <div class="project-card" data-category="class">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/class-projects/painter-and-plotter/monet 1.jpg" alt="Linear Stage Painter Plotter" class="project-img">
+                        <img src="assets/images/class-projects/painter-and-plotter/monet 1.jpg" alt="Gantry Painter Plotter" class="project-img">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="projects/detailed/monet-machine.html" class="project-link" title="View Project">
@@ -197,12 +165,6 @@
                         <p class="project-description">
                             2.5 degree of freedom robotic system capable of automatically painting and drawing images on canvas using MATLAB, G-code processing, and Arduino control systems.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">MATLAB</span>
-                            <span class="tech-tag">Arduino Control</span>
-                            <span class="tech-tag">G-Code Processing</span>
-                            <span class="tech-tag">Robotics</span>
-                        </div>
                         <div class="project-actions">
                             <a href="projects/detailed/monet-machine.html" class="see-more-btn">
                                 <i class="fas fa-external-link-alt"></i> See More
@@ -212,7 +174,7 @@
                 </div>
 
                 <!-- Class Project 3 -->
-                <div class="project-card" data-category="class">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/images/class-projects/laser-communicator/image16.png" alt="Encrypted Laser Communication System" class="project-img">
                         <div class="project-overlay">
@@ -229,12 +191,6 @@
                         <p class="project-description">
                             Wireless optical communication device using Arduino microcontrollers for encoding and decoding binary sequences, designed for automated machine control applications.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Arduino Programming</span>
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">Digital Communication</span>
-                            <span class="tech-tag">Systems Design</span>
-                        </div>
                         <div class="project-actions">
                             <a href="projects/detailed/laser-communicator.html" class="see-more-btn">
                                 <i class="fas fa-external-link-alt"></i> See More
@@ -243,79 +199,8 @@
                     </div>
                 </div>
 
-                <!-- Class Project 5 -->
-                <div class="project-card centered-lone" data-category="class">
-                    <div class="project-image">
-                        <img src="assets/images/class-projects/linear-potentiometer/IMG_0218.JPG" alt="Mechanical Oscillator Analysis" class="project-img">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="projects/detailed/mechanical-oscillator.html" class="project-link" title="View Project">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>View Project</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Mechanical Oscillator Analysis</h3>
-                        <p class="project-description">
-                            Advanced data acquisition system using linear potentiometers and LabVIEW to characterize frequency response of nonlinear mechanical systems with comprehensive uncertainty analysis.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">LabVIEW</span>
-                            <span class="tech-tag">MATLAB</span>
-                            <span class="tech-tag">Data Acquisition</span>
-                            <span class="tech-tag">System Dynamics</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="projects/detailed/mechanical-oscillator.html" class="see-more-btn">
-                                <i class="fas fa-external-link-alt"></i> See More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Machine Shop Section Break -->
-                <div class="project-section-break machine-shop" data-category="machine-shop">
-                    <div class="project-section-title">
-                        <i class="fas fa-tools"></i> Machine Shop Projects
-                    </div>
-                </div>
-
-                <!-- Machine Shop Project 1 -->
-                <div class="project-card" data-category="machine-shop">
-                    <div class="project-image">
-                        <img src="assets/images/machine-shop/chess-piece/IMG_8751.jpg" alt="CNC Chess Piece" class="project-img">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="projects/detailed/chess-piece-cnc.html" class="project-link" title="View Project">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>View Project</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Precision CNC Lathe</h3>
-                        <p class="project-description">
-                            Precision CNC lathe operation to manufacture chess pawns from aluminum stock, focusing on achieving superior surface finish and dimensional accuracy through CAM programming.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">ProtoTrak CNC</span>
-                            <span class="tech-tag">Fusion CAM</span>
-                            <span class="tech-tag">Machine Calibration</span>
-                            <span class="tech-tag">Precision Machining</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="projects/detailed/chess-piece-cnc.html" class="see-more-btn">
-                                <i class="fas fa-external-link-alt"></i> See More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Machine Shop Project 2 -->
-                <div class="project-card" data-category="machine-shop">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/images/machine-shop/cnc_mill/IMG_2321.JPG" alt="3-Axis CNC Milling" class="project-img">
                         <div class="project-overlay">
@@ -332,12 +217,6 @@
                         <p class="project-description">
                             CAD-to-CAM workflow on HAAS CNC mills using HSMWorks, producing custom HDPE coaster sets through toolpath optimization, workholding, and precision finishing.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HAAS CNC</span>
-                            <span class="tech-tag">HSMWorks</span>
-                            <span class="tech-tag">Fusion CAM</span>
-                            <span class="tech-tag">Toolpath Generation</span>
-                        </div>
                         <div class="project-actions">
                             <a href="projects/detailed/hdpe-coaster-cnc.html" class="see-more-btn">
                                 <i class="fas fa-external-link-alt"></i> See More
@@ -346,40 +225,8 @@
                     </div>
                 </div>
 
-                <!-- Machine Shop Project 3 -->
-                <div class="project-card" data-category="machine-shop">
-                    <div class="project-image">
-                        <img src="assets/images/machine-shop/thermoformed-bins/IMG_8992.jpg" alt="Custom Thermoformed Storage Bins" class="project-img">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="projects/detailed/thermoformed-bins.html" class="project-link" title="View Project">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>View Project</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Custom Thermoformed Storage Bins</h3>
-                        <p class="project-description">
-                            Designed and manufactured custom storage solutions for machine shop organization using vacuum thermoforming and 3D printing integration.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Vacuum Thermoforming</span>
-                            <span class="tech-tag">3D Printing</span>
-                            <span class="tech-tag">Product Design</span>
-                            <span class="tech-tag">Manufacturing</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="projects/detailed/thermoformed-bins.html" class="see-more-btn">
-                                <i class="fas fa-external-link-alt"></i> See More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Machine Shop Project 4 -->
-                <div class="project-card" data-category="machine-shop">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/images/machine-shop/adoptatool/bandsaw2.jpg" alt="Machine Maintenance & Repair" class="project-img">
                         <div class="project-overlay">
@@ -394,14 +241,8 @@
                     <div class="project-content">
                         <h3 class="project-title">Machine Maintenance & Repair</h3>
                         <p class="project-description">
-                            Comprehensive maintenance program including horizontal bandsaw care and cold saw pump replacement, ensuring optimal equipment performance and safety.
+                            Routine maintenance and repairs on personally assigned equipment, ensuring optimal performance and safety.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Preventive Maintenance</span>
-                            <span class="tech-tag">Mechanical Repair</span>
-                            <span class="tech-tag">Troubleshooting</span>
-                            <span class="tech-tag">Equipment Care</span>
-                        </div>
                         <div class="project-actions">
                             <a href="projects/detailed/machine-maintenance.html" class="see-more-btn">
                                 <i class="fas fa-external-link-alt"></i> See More
@@ -410,15 +251,8 @@
                     </div>
                 </div>
 
-                <!-- Personal Projects Section Break -->
-                <div class="project-section-break personal" data-category="personal">
-                    <div class="project-section-title">
-                        <i class="fas fa-heart"></i> Personal Projects
-                    </div>
-                </div>
-
                 <!-- Personal Project 1 -->
-                <div class="project-card" data-category="personal">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/images/personal-projects/cb350/IMG_2054.jpg" alt="1969 Honda CB350 Restored" class="project-img">
                         <div class="project-overlay">
@@ -435,12 +269,6 @@
                         <p class="project-description">
                             Complete restoration of vintage Honda motorcycles including full engine rebuilds, valve replacement, and component restoration on 1980 CM200T and 1969 CB350 models.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Engine Rebuilding</span>
-                            <span class="tech-tag">Mechanical Diagnosis</span>
-                            <span class="tech-tag">Restoration</span>
-                            <span class="tech-tag">Precision Assembly</span>
-                        </div>
                         <div class="project-actions">
                             <a href="projects/detailed/cb350-rebuild.html" class="see-more-btn">
                                 <i class="fas fa-external-link-alt"></i> See More
@@ -450,7 +278,7 @@
                 </div>
 
                 <!-- Personal Project 2 -->
-                <div class="project-card" data-category="personal">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/images/personal-projects/panasonic/image1.jpg" alt="Fixed Gear Bicycle Build" class="project-img">
                         <div class="project-overlay">
@@ -467,12 +295,6 @@
                         <p class="project-description">
                             Complete conversion of vintage Panasonic road bike to fixed-gear configuration with custom component selection and frame restoration.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Bicycle Mechanics</span>
-                            <span class="tech-tag">Component Sourcing</span>
-                            <span class="tech-tag">Assembly</span>
-                            <span class="tech-tag">Maintenance</span>
-                        </div>
                         <div class="project-actions">
                             <a href="projects/detailed/panasonic-bike.html" class="see-more-btn">
                                 <i class="fas fa-external-link-alt"></i> See More
@@ -482,7 +304,7 @@
                 </div>
 
                 <!-- Personal Project 3 -->
-                <div class="project-card" data-category="personal">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/images/personal-projects/jeep/image2.jpg" alt="Jeep Wrangler Maintenance" class="project-img">
                         <div class="project-overlay">
@@ -497,14 +319,8 @@
                     <div class="project-content">
                         <h3 class="project-title">Jeep Wrangler Maintenance</h3>
                         <p class="project-description">
-                            Comprehensive automotive maintenance and repair on 2001 Jeep Wrangler focusing on brake systems and preventive care.
+                            Automotive maintenance and repair on 2001 Jeep Wrangler focusing on brake systems and preventive care.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Automotive Repair</span>
-                            <span class="tech-tag">Brake Systems</span>
-                            <span class="tech-tag">Troubleshooting</span>
-                            <span class="tech-tag">Preventive Maintenance</span>
-                        </div>
                         <div class="project-actions">
                             <a href="projects/detailed/jeep-maintenance.html" class="see-more-btn">
                                 <i class="fas fa-external-link-alt"></i> See More
@@ -514,9 +330,9 @@
                 </div>
 
                 <!-- Personal Project 4 -->
-                <div class="project-card" data-category="personal">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/personal-projects/film_scanner/IMG_0737.JPG" alt="DSLR Film Scanner Build" class="project-img">
+                        <img src="assets/images/personal-projects/film_scanner/IMG_0737.JPG" alt="DSLR Film Scanner" class="project-img">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="projects/detailed/film-scanner.html" class="project-link" title="View Project">
@@ -531,12 +347,6 @@
                         <p class="project-description">
                             Custom 35mm film digitization rig built with 8020 aluminum extrusion, a macro lens, and a backlit light tray for in-house negative scanning.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">8020 Fabrication</span>
-                            <span class="tech-tag">Optical Alignment</span>
-                            <span class="tech-tag">Macro Photography</span>
-                            <span class="tech-tag">Post-Processing</span>
-                        </div>
                         <div class="project-actions">
                             <a href="projects/detailed/film-scanner.html" class="see-more-btn">
                                 <i class="fas fa-external-link-alt"></i> See More
@@ -553,7 +363,6 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Work Experience</h2>
-                <p class="section-subtitle">Professional experience and key contributions</p>
             </div>
             <div class="experience-timeline">
                 <!-- Job 1 -->
@@ -639,86 +448,10 @@
                             <p>Optimized Rypos' Diesel Automotive Particulate filter design through materials research and testing. Developed lab safety protocols and presented findings to engineering team.</p>
                             <ul class="achievements">
                                 <li>Tested and selected new concrete-based alternatives for filter adhesive materials</li>
-                                <li>Conducted analysis and strength testing of automotive particulate filter components</li>
+                                <li>Conducted analysis and strength testing of filter components</li>
                                 <li>Developed lab safety, precision, and data accumulation skills in industrial research environment</li>
-                                <li>Presented weekly progress updates to Rypos' team of engineers, demonstrating public speaking skills</li>
-                                <li>Contributed to optimization of diesel automotive particulate filter housing design</li>
+                                <li>Presented weekly progress updates to Rypos' team of engineers</li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Technical Skills</h2>
-                <p class="section-subtitle">Technologies and tools I work with</p>
-            </div>
-            <div class="skills-content">
-                <div class="skills-category">
-                    <h3>CAD & Design Software</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <i class="fas fa-cube"></i>
-                            <span>SolidWorks</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-cogs"></i>
-                            <span>Fusion</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-drafting-compass"></i>
-                            <span>Onshape</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-building"></i>
-                            <span>Revit</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h3>Programming & Software</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>C/C++</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-calculator"></i>
-                            <span>MATLAB</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h3>Manufacturing & Fabrication</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <i class="fas fa-industry"></i>
-                            <span>CNC Machining</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-bolt"></i>
-                            <span>Rapid Prototyping</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-print"></i>
-                            <span>3D Printing</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-ruler-combined"></i>
-                            <span>GD&amp;T</span>
                         </div>
                     </div>
                 </div>
@@ -904,6 +637,16 @@
             }
         }
     </script>
+
+    <!-- Project Detail Modal -->
+    <div class="project-modal-overlay" id="projectModal">
+        <div class="project-modal-container">
+            <button class="project-modal-close" id="projectModalClose" aria-label="Close project">
+                <i class="fas fa-times"></i>
+            </button>
+            <iframe class="project-modal-iframe" id="projectModalIframe" src="" title="Project Details"></iframe>
+        </div>
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>
