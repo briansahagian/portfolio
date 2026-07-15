@@ -11,26 +11,69 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dynamic navbar height adjustment
     initDynamicNavbarPadding();
     
-    // Project filtering
-    initProjectFiltering();
-    
     // Smooth scrolling
     initSmoothScrolling();
     
     // Contact form
     initContactForm();
     
-    // Scroll animations
-    initScrollAnimations();
     
     // Navbar scroll effect
     initNavbarScrollEffect();
     
     // Initialize lightbox
     initLightbox();
-    
+
+    // Project detail modal
+    initProjectModal();
+
     console.log('All initialization functions called'); // Debug log
 });
+
+// Project Detail Modal
+function initProjectModal() {
+    const overlay = document.getElementById('projectModal');
+    const iframe = document.getElementById('projectModalIframe');
+    const closeBtn = document.getElementById('projectModalClose');
+
+    function openModal(url) {
+        iframe.src = url;
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    iframe.addEventListener('load', function() {
+        try {
+            const doc = iframe.contentDocument || iframe.contentWindow.document;
+            const style = doc.createElement('style');
+            style.textContent = 'html { font-size: 11px !important; } p, li { font-size: 1.4rem !important; line-height: 1.7 !important; } img { max-width: 100% !important; } .hero-img { max-height: 460px !important; width: auto !important; height: auto !important; object-fit: contain !important; } .gallery-img, .project-img { max-height: 280px !important; object-fit: cover !important; } .navbar { display: none !important; } .project-hero-image-section { margin-top: 0 !important; padding-top: 16px !important; }';
+            doc.head.appendChild(style);
+        } catch(e) {}
+    });
+
+    function closeProjectModal() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(function() { iframe.src = ''; }, 300);
+    }
+
+    document.querySelectorAll('.see-more-btn, .project-link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            openModal(this.getAttribute('href'));
+        });
+    });
+
+    closeBtn.addEventListener('click', closeProjectModal);
+
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) closeProjectModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) closeProjectModal();
+    });
+}
 
 // Initialize Lightbox Event Listeners
 function initLightbox() {
@@ -155,49 +198,6 @@ function initDynamicNavbarPadding() {
             attributeFilter: ['class']
         });
     }
-}
-
-// Project Filtering
-function initProjectFiltering() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-    const sectionBreaks = document.querySelectorAll('.project-section-break');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
-            
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filter projects
-            projectCards.forEach(card => {
-                const category = card.getAttribute('data-category');
-                
-                if (filter === 'all' || category === filter) {
-                    card.classList.remove('hidden');
-                    card.style.display = '';
-                    card.style.opacity = '';
-                    card.style.transform = '';
-                } else {
-                    card.classList.add('hidden');
-                    card.style.display = 'none';
-                }
-            });
-            
-            // Handle section breaks based on active filter
-            sectionBreaks.forEach(sectionBreak => {
-                const sectionCategory = sectionBreak.getAttribute('data-category');
-                
-                if (filter === 'all' || filter === sectionCategory) {
-                    sectionBreak.style.display = '';
-                } else {
-                    sectionBreak.style.display = 'none';
-                }
-            });
-        });
-    });
 }
 
 // Smooth Scrolling
@@ -396,44 +396,7 @@ function showNotification(message, type) {
 }
 
 // Scroll Animations
-function initScrollAnimations() {
-    // Add intersection observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.01, // Reduced from 0.05 to trigger even earlier
-        rootMargin: '150px 0px 0px 0px' // Increased from 50px to 150px - trigger much earlier
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-    
-    // Observe all sections
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.classList.add('fade-in');
-        observer.observe(section);
-    });
-    
-    // Observe project cards with faster animations
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach((card, index) => {
-        card.classList.add('fade-in');
-        card.style.transitionDelay = `${index * 0.04}s`; // Reduced from 0.07s to 0.04s for faster appearance
-        observer.observe(card);
-    });
-    
-    // Observe skill items
-    const skillItems = document.querySelectorAll('.skill-item');
-    skillItems.forEach((item, index) => {
-        item.classList.add('fade-in');
-        item.style.transitionDelay = `${index * 0.02}s`; // Reduced from 0.04s to 0.02s for faster appearance
-        observer.observe(item);
-    });
-}
+
 
 // Navbar Scroll Effect
 function initNavbarScrollEffect() {

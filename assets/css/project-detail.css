@@ -1,5 +1,41 @@
 /* Project Detail Page Styles */
 
+/* Scaled-down base size for project pages */
+html {
+    font-size: 11px !important;
+}
+
+p, li, .project-subtitle, .content-main p, .job-description p, .achievements li {
+    font-size: 1.4rem !important;
+    line-height: 1.7 !important;
+}
+
+.container,
+.nav-container,
+.hero-container {
+    max-width: 720px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+}
+
+.hero-img {
+    max-height: 460px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+.gallery-img, .project-img {
+    max-height: 280px !important;
+    object-fit: cover !important;
+}
+
+/* Hide project navigation buttons and skills section */
+.project-navigation,
+section:has(.skills-tags) {
+    display: none !important;
+}
+
 /* Touch-friendly enhancements */
 .gallery-img, .btn, .nav-link, .skill-tag {
     /* Ensure minimum touch target size */
@@ -36,7 +72,7 @@ html, body {
 
 .project-hero {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 30px 0 60px;
+    padding: 30px 0 15px;
 }
 
 .project-hero-content {
@@ -107,7 +143,7 @@ html, body {
 
 /* Project Sections */
 .project-section {
-    padding: 80px 0;
+    padding: 30px 0;
 }
 
 .project-section.bg-light {
@@ -400,7 +436,7 @@ html, body {
 
 .photo-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
@@ -420,9 +456,9 @@ html, body {
 
 .gallery-item img {
     width: 100%;
-    height: auto;
-    min-height: 200px;
-    object-fit: contain;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     background: #f8f9fa;
     display: block;
 }
@@ -1094,7 +1130,7 @@ html, body {
     }
 
     .photo-gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 15px;
         width: 100%;
         max-width: 100%;
